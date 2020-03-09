@@ -1,4 +1,4 @@
-# Typolize.css
+# Typolize
 
 A style reset for creating perfect modular scale in typography and spacing.
 
