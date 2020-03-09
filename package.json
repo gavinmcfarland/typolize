@@ -1,7 +1,7 @@
 {
   "name": "typolize",
   "version": "1.0.0",
-  "description": "Creates sensible defaults for all typography",
+  "description": "A style reset for creating perfect modular scale in typography and spacing",
   "main": "src/index.js",
   "scripts": {
     "build": "node src/index.js"
@@ -15,5 +15,9 @@
     "postcss-for": "^2.1.1",
     "postcss-logical": "^4.0.2",
     "postcss-pow": "^1.0.1"
-  }
+  },
+  "repository": {
+		"type": "git",
+		"url": "git+https://github.com/limitlessloop/typolize.git"
+	}
 }

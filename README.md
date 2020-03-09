@@ -1,6 +1,6 @@
 # Typolize.css
 
-A style reset for creating the perfect scale and vertical rhythm for applications and websites.
+A style reset for creating perfect modular scale in typography and spacing.
 
 ## Install
 
