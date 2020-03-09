@@ -1,0 +1,103 @@
+:root {
+    /* Base values */
+    --root-size: 16px;
+    --line-ratio: 1.5;
+    --font-ratio: 1.333;
+
+    /* Font sizes and spacing scales */
+    --font-size--1: calc(1rem * (1 / (var(--font-ratio))));
+    --font-size-0: calc(1rem * 1);
+    --font-size-1: calc(1rem * (var(--font-ratio)));
+    --font-size-2: calc(1rem * (var(--font-ratio) * var(--font-ratio)));
+    --font-size-3: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+    --font-size-4: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+    --font-size-5: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+    --font-size-6: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+    --space--5: calc(1rem * (1 / (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio))));
+    --space--4: calc(1rem * (1 / (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio))));
+    --space--3: calc(1rem * (1 / (var(--line-ratio) * var(--line-ratio) * var(--line-ratio))));
+    --space--2: calc(1rem * (1 / (var(--line-ratio) * var(--line-ratio))));
+    --space--1: calc(1rem * (1 / (var(--line-ratio))));
+    --space-0: calc(1rem * 1);
+    --space-1: calc(1rem * (var(--line-ratio)));
+    --space-2: calc(1rem * (var(--line-ratio) * var(--line-ratio)));
+    --space-3: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --space-4: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --space-5: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --space-6: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)))
+}
+
+/* Remove first and last margins */
+
+:first-child {
+    margin-top: unset;
+}
+
+:last-child {
+    margin-bottom: unset;
+}
+
+/* Remove bottom margin from bowser default */
+
+* {
+    margin-bottom: unset;
+}
+
+/* Reset base font */
+
+html {
+    font-size: var(--root-size);
+}
+
+/* Type sizing */
+
+body {
+    font-size: var(--font-size-0);
+}
+
+* + * {
+    margin-top: var(--space-1);
+}
+
+h1 {
+    font-size: var(--font-size-6);
+}
+
+h2 {
+    font-size: var(--font-size-5);
+}
+
+h3 {
+    font-size: var(--font-size-4);
+}
+
+h4 {
+    font-size: var(--font-size-3);
+}
+
+h5 {
+    font-size: var(--font-size-2);
+}
+
+h6 {
+    font-size: var(--font-size-1);
+}
+
+p {
+    font-size: var(--font-size-0);
+}
+
+blockquote {
+    font-size: var(--font-size-0);
+}
+
+/* Element spacing */
+
+h1, h2, h3, h4 {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-2);
+}
+
+hr {
+    margin-top: var(--space-4);
+}
