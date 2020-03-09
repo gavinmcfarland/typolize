@@ -19,5 +19,13 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/limitlessloop/typolize.git"
-  }
+  },
+  "keywords": [
+    "css",
+    "postcss",
+    "spacing",
+    "typography",
+    "spacing",
+    "modular scale"
+  ]
 }
