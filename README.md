@@ -2,7 +2,7 @@
 
 A style reset for creating perfect modular scale in typography and spacing.
 
-Tpolize creates default font-sizes and margins for all typographical elements based on a set of variables.
+Typolize creates default font-sizes and margins for all typographical elements based on a set of variables.
 
 ```css
 :root {
