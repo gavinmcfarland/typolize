@@ -89,11 +89,7 @@ h6 {
     font-size: var(--font-size-1);
 }
 
-p {
-    font-size: var(--font-size-0);
-}
-
-blockquote {
+p, blockquote {
     font-size: var(--font-size-0);
 }
 
