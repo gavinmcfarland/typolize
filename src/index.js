@@ -14,5 +14,9 @@ fs.readFile('src/typolize.css', (err, css) => {
       if ( result.map ) {
         fs.writeFile('dest/typolize.css.map', result.map, () => true)
       }
+      fs.writeFile('public/typolize.css', result.css, () => true)
+      if ( result.map ) {
+        fs.writeFile('public/typolize.css.map', result.map, () => true)
+      }
     })
 })
