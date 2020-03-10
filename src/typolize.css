@@ -33,7 +33,7 @@ body {
     font-size: var(--font-size-0);
 }
 
-body * + * {
+body * + *:not(div) {
     margin-top: var(--space-1);
 }
 
