@@ -26,10 +26,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    - run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git commit -m "Github actions created new build"
-    env:
-      CI: true
+    - run: git config --local user.email "action@github.com"
+    - run: git config --local user.name "GitHub Action"
+    - run: git add .
+    - run: git commit -m "Github actions created new build"
+      env:
+        CI: true
