@@ -77,7 +77,7 @@ p, blockquote {
 
 /* Element spacing */
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     margin-block: var(--space-4) var(--space-2);
 }
 
