@@ -31,5 +31,5 @@ jobs:
         git config --local user.name "GitHub Action"
         git add .
         git commit -m "Github actions created new build"
-      env:
-        CI: true
+    env:
+      CI: true
