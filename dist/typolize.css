@@ -18,19 +18,21 @@
     --font-size-8: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
     --font-size-9: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
     --font-size-10: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
-    --space--2: calc(1rem * (1 / (var(--line-ratio) * var(--line-ratio))));
-    --space--1: calc(1rem * (1 / (var(--line-ratio))));
-    --space-0: calc(1rem * 1);
-    --space-1: calc(1rem * (var(--line-ratio)));
-    --space-2: calc(1rem * (var(--line-ratio) * var(--line-ratio)));
-    --space-3: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-4: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-5: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-6: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-7: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-8: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-9: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-10: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)))
+    --spacing--2: calc(1rem * (1 / (var(--line-ratio) * var(--line-ratio))));
+    --spacing--1: calc(1rem * (1 / (var(--line-ratio))));
+    --spacing-0: calc(1rem * 1);
+    --spacing-1: calc(1rem * (var(--line-ratio)));
+    --spacing-2: calc(1rem * (var(--line-ratio) * var(--line-ratio)));
+    --spacing-3: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-4: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-5: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-6: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-7: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-8: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-9: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-10: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)))
+
+    /* --spacing-0: 0; */
 }
 
 /* Reset base font */
@@ -43,58 +45,4 @@ html {
 
 body {
     line-height: var(--line-ratio);
-}
-
-/* Type sizing */
-
-body {
-    font-size: var(--font-size-0);
-}
-
-body * + *:not(div) {
-    margin-top: var(--space-1);
-}
-
-h1 {
-    font-size: var(--font-size-6);
-}
-
-h2 {
-    font-size: var(--font-size-5);
-}
-
-h3 {
-    font-size: var(--font-size-4);
-}
-
-h4 {
-    font-size: var(--font-size-3);
-}
-
-h5 {
-    font-size: var(--font-size-2);
-}
-
-h6 {
-    font-size: var(--font-size-1);
-}
-
-p, blockquote {
-    font-size: var(--font-size-0);
-}
-
-ul, ol {
-    font-size: var(--font-size-0);
-}
-
-/* Element spacing */
-
-h1, h2, h3, h4, h5 {
-    margin-top: var(--space-4);
-    margin-bottom: var(--space-2);
-}
-
-hr {
-    margin-top: var(--space-2);
-    margin-bottom: var(--space-2);
 }

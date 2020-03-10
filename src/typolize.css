@@ -11,8 +11,10 @@
     }
        
     @for $i from -2 to 10 {
-    --space-$(i): calc(1rem * pow(var(--line-ratio), $(i)));
+    --spacing-$(i): calc(1rem * pow(var(--line-ratio), $(i)));
     }
+
+    /* --spacing-0: 0; */
 }
 
 /* Reset base font */
@@ -25,56 +27,4 @@ html {
 
 body {
     line-height: var(--line-ratio);
-}
-
-/* Type sizing */
-
-body {
-    font-size: var(--font-size-0);
-}
-
-body * + *:not(div) {
-    margin-top: var(--space-1);
-}
-
-h1 {
-    font-size: var(--font-size-6);
-}
-
-h2 {
-    font-size: var(--font-size-5);
-}
-
-h3 {
-    font-size: var(--font-size-4);
-}
-
-h4 {
-    font-size: var(--font-size-3);
-}
-
-h5 {
-    font-size: var(--font-size-2);
-}
-
-h6 {
-    font-size: var(--font-size-1);
-}
-
-p, blockquote {
-    font-size: var(--font-size-0);
-}
-
-ul, ol {
-    font-size: var(--font-size-0);
-}
-
-/* Element spacing */
-
-h1, h2, h3, h4, h5 {
-    margin-block: var(--space-4) var(--space-2);
-}
-
-hr {
-    margin-block: var(--space-2);
 }

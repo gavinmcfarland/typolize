@@ -20,7 +20,7 @@
 
     ol li {
         counter-increment: number;
-        padding-left: var(--space-1);
+        padding-left: var(--spacing-1);
     }
 
     ol li::before {
@@ -32,7 +32,7 @@
 
     body {
         font-family: Helvetica, sans-serif;
-        padding: var(--space-3);
+        padding: var(--spacing-3);
         margin: 0;
     }
 
@@ -40,7 +40,7 @@
       letter-spacing: -0.03em;
     }
 
-    .text-2 {
+    .name {
       font-size: var(--font-size-2);
     }
 
@@ -63,12 +63,66 @@
     .remove-margin > :last-child {
         margin-bottom: unset;
     }
+
+    /* Type sizing */
+
+    body {
+        font-size: var(--font-size-0);
+    }
+
+    body * + * {
+        margin-top: var(--spacing-1);
+    }
+
+    h1 {
+        font-size: var(--font-size-6);
+    }
+
+    h2 {
+        font-size: var(--font-size-5);
+    }
+
+    h3 {
+        font-size: var(--font-size-4);
+    }
+
+    h4 {
+        font-size: var(--font-size-3);
+    }
+
+    h5 {
+        font-size: var(--font-size-2);
+    }
+
+    h6 {
+        font-size: var(--font-size-1);
+    }
+
+    p, blockquote {
+        font-size: var(--font-size-0);
+    }
+
+    ul, ol {
+        font-size: var(--font-size-0);
+    }
+
+    /* Element spacing */
+
+    h1, h2, h3, h4, h5 {
+        margin-top: var(--spacing-4);
+        margin-bottom: var(--spacing-2);
+    }
+
+    hr {
+        margin-top: var(--spacing-2);
+        margin-bottom: var(--spacing-2);
+    }
   </style>
 
 </head>
 
 <body class="remove-margin">
-    <h1 class="text-2">Typolize</h1>
+    <h1 class="name">Typolize</h1>
     <p>Normalizes type sizes and margins.</p>
     <hr></hr>
 

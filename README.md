@@ -2,7 +2,7 @@
 
 A style reset for creating perfect modular scale in typography and spacing.
 
-Typolize creates default font-sizes and margins for all typographical elements based on a set of variables which you can customize.
+Typolize creates CSS variables for font-sizes and spacing based on a set of defaults which you can customize.
 
 ```css
 :root {
@@ -12,14 +12,27 @@ Typolize creates default font-sizes and margins for all typographical elements b
 }
 ```
 
-These are used to create a range of CSS variables from `-2` to `10` which you can reference elsewhere.
+Values range between `-2` to `10` which you can reference to define margins and paddings between elements.
 
-- `var(--font-size-<integer:-2-10>)`
-- `var--spacing-<integer:-2-10>)`
+```css
+body {
+    font-size: var(--font-size-0);
+}
+
+h1 {
+    font-size: var(--font-size-6);
+    margin-bottom: var(--spacing-3);
+}
+
+p {
+    margin-top: var(--spacing-1);
+    margin-bottom: var(--spacing-0);
+}
+```
 
 Typolize is compatible with `reset.css` and `normalize.css`.
 
-See a [preview](https://typolize.limitlessloop.now.sh/) of the styles.
+See a [demo](https://typolize.limitlessloop.now.sh/) of styles being applied to different type elements.
 
 
 ## Install
@@ -42,10 +55,6 @@ And in your stylesheets using PostCSS import
 @import 'typolize'
 ```
 
-## Customise
-
-
-
 ## Development
 
 To customise the output or for development purposes.
@@ -60,4 +69,3 @@ To customise the output or for development purposes.
     npm run build
     ```
 4. Styles are outputted to `dist/typolize.css`
-
