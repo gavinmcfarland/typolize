@@ -28,6 +28,7 @@ jobs:
     - run: npm run build --if-present
       env:
         CI: true
-    - uses: stefanzweifel/git-auto-commit-action@v4.1.0
+    - name: Simple commit
+      uses: zwaldowski/git-commit-action@v1
       with:
         commit_message: Github actions created build
