@@ -14,19 +14,19 @@
   <style>
 
     :root {
-      --has-layout: var(--space);
+      --has-layout: var(--spacing);
     }
 
 * > :first-child {
-    --space: var(--has-layout, 0);
+    --spacing: var(--has-layout, 0);
 }
 
 .has-layout {
-    --has-layout: intial;
+    --has-layout: initial;
 }
 
 .has-layout > * > * {
-    --has-layout: var(--space);
+    --has-layout: var(--spacing);
 }
 
 
@@ -49,7 +49,7 @@
 
     body {
         font-family: Helvetica, sans-serif;
-        margin: var(--space-3);
+        margin: var(--spacing-3);
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -66,6 +66,59 @@
     hr {
       border-bottom: 1px solid lightgrey;
     }
+
+    @media (min-width: 900px) {
+      [grid] {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        --has-layout: initial;
+        row-gap: var(--spacing-4);
+      }
+      /* [grid] > * > * {
+        --has-layout: var(--spacing);
+      } */
+      [grid] > * {
+        grid-column: 1 / -1;
+      }
+      [span] {
+      --spacing: 0;
+      /* color: var(--has-layout, #FF0000); */
+      }
+    }
+
+    
+
+    
+
+    [span="1"] {
+      grid-column: span 2;
+    }
+
+    [span="2"] {
+      grid-column: span 2;
+    }
+
+    [span="3"] {
+      grid-column: span 4;
+    }
+
+    [span="4"] {
+      grid-column: span 4;
+    }
+
+    [span="5"] {
+      grid-column: span 5;
+    }
+
+    [span="6"] {
+      grid-column: span 6;
+    }
+
+
+
+
+
+
 
     /* Type sizing */
 
@@ -107,24 +160,25 @@
 
     /* Element spacing */
 
-    * {
-        --space: var(--space-1);
+    * + * {
+        --spacing: var(--spacing-1);
     }
 
     h1 + * {
-        --space: var(--space-4);
+        --spacing: var(--spacing-4);
     }
 
     hr, hr + * {
-        --space: var(--space-4);
+        --spacing: var(--spacing-4);
     }
 
+    h6 + * {
+        --spacing: var(--spacing-4);
+    }
 
-
-
-
-
-
+    div + h6 {
+      --spacing: var(--spacing-4)
+    }
 
 
     .name {
@@ -133,7 +187,7 @@
     }
 
     .name + * {
-      --space: var(--space-1);
+      --spacing: var(--spacing-1);
     }
 
     .tagline {
@@ -142,50 +196,7 @@
 
     
 
-    @media (min-width: 900px) {
-      [grid] {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        --has-layout: intial;
-        row-gap: var(--space-4);
-      }
-      /* [grid] > * > * {
-        --has-layout: var(--space);
-      } */
-      [grid] > * {
-        grid-column: 1 / -1;
-      }
-    }
-
     
-
-    [span] {
-      --space: var(--has-layout, 0);
-    }
-
-    [span="1"] {
-      grid-column: span 2;
-    }
-
-    [span="2"] {
-      grid-column: span 2;
-    }
-
-    [span="3"] {
-      grid-column: span 4;
-    }
-
-    [span="4"] {
-      grid-column: span 4;
-    }
-
-    [span="5"] {
-      grid-column: span 5;
-    }
-
-    [span="6"] {
-      grid-column: span 6;
-    }
 
     
     
@@ -194,9 +205,13 @@
 </head>
 
 <body>
+    <div>
     <h1 class="name">Typolize</h1>
     <p class="tagline">Normalizes type sizes and spacing.</p>
-    <hr></hr>
+    
+    </div>
+    
+    <hr/>
 
     <div grid>
     

@@ -21,19 +21,19 @@
     --font-size-8: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
     --font-size-9: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
     --font-size-10: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
-    --space--2: calc(1rem * (1 / (var(--line-ratio) * var(--line-ratio))));
-    --space--1: calc(1rem * (1 / (var(--line-ratio))));
-    --space-0: calc(1rem * 1);
-    --space-1: calc(1rem * (var(--line-ratio)));
-    --space-2: calc(1rem * (var(--line-ratio) * var(--line-ratio)));
-    --space-3: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-4: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-5: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-6: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-7: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-8: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-9: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --space-10: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)))
+    --spacing--2: calc(1rem * (1 / (var(--line-ratio) * var(--line-ratio))));
+    --spacing--1: calc(1rem * (1 / (var(--line-ratio))));
+    --spacing-0: calc(1rem * 1);
+    --spacing-1: calc(1rem * (var(--line-ratio)));
+    --spacing-2: calc(1rem * (var(--line-ratio) * var(--line-ratio)));
+    --spacing-3: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-4: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-5: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-6: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-7: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-8: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-9: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --spacing-10: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)))
 
     /* --spacing-0: 0; */
 }
@@ -53,7 +53,7 @@ body {
 /* Needs to more specific than most resets */
 
 body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, hr {
-    margin-top: var(--space);
+    margin-top: var(--spacing);
 }
 
 /* background: rgba(20,230,245,0.1); */
