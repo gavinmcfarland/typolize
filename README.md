@@ -1,8 +1,8 @@
 # Typolize
 
-A style reset for creating perfect modular scale in typography and spacing.
+Normalizes type sizing and spacing.
 
-Typolize creates CSS variables for font-sizes and spacing based on a set of defaults which you can customize.
+Customise using the variables the following variables.
 
 ```css
 :root {
@@ -12,27 +12,41 @@ Typolize creates CSS variables for font-sizes and spacing based on a set of defa
 }
 ```
 
-Values range between `-2` to `10` which you can reference to define margins and paddings between elements.
+## Type
+
+Type is adjusted to account for excessive line height. Apply font sizes using a variables between `-2` and `10`.
 
 ```css
-body {
-    font-size: var(--font-size-0);
-}
-
 h1 {
     font-size: var(--font-size-6);
-    margin-bottom: var(--spacing-3);
 }
 
 p {
-    margin-top: var(--spacing-1);
-    margin-bottom: var(--spacing-0);
+    font-size: var(--font-size-0);
+}
+
+small {
+    font-size: var(--font-size--1);
+}
+```
+
+## Spacing
+
+Spacing is managed as a relationship between elements and is owned by containers. Apply spacing between elements using a custom property with a variable between `-2` and `10`.
+
+```css
+* + * {
+    --spacing: var(--spacing-1);
+}
+
+h1 + * {
+    --spacing: var(--spacing-4);
 }
 ```
 
 Typolize is compatible with `reset.css` and `normalize.css`.
 
-See a [demo](https://typolize.limitlessloop.now.sh/) of styles being applied to different type elements.
+See a [demo](https://typolize.now.sh/) of styles being applied to different type elements.
 
 
 ## Install

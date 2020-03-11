@@ -4,6 +4,9 @@
     --line-ratio: 1.5;
     --font-ratio: 1.333;
 
+    /* Font height */
+    --font-height: 0.75;
+
     /* Font sizes and spacing scales */
     --font-size--2: calc(1rem * (1 / (var(--font-ratio) * var(--font-ratio))));
     --font-size--1: calc(1rem * (1 / (var(--font-ratio))));
@@ -18,19 +21,19 @@
     --font-size-8: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
     --font-size-9: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
     --font-size-10: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
-    --spacing--2: calc(1rem * (1 / (var(--line-ratio) * var(--line-ratio))));
-    --spacing--1: calc(1rem * (1 / (var(--line-ratio))));
-    --spacing-0: calc(1rem * 1);
-    --spacing-1: calc(1rem * (var(--line-ratio)));
-    --spacing-2: calc(1rem * (var(--line-ratio) * var(--line-ratio)));
-    --spacing-3: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --spacing-4: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --spacing-5: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --spacing-6: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --spacing-7: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --spacing-8: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --spacing-9: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --spacing-10: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)))
+    --space--2: calc(1rem * (1 / (var(--line-ratio) * var(--line-ratio))));
+    --space--1: calc(1rem * (1 / (var(--line-ratio))));
+    --space-0: calc(1rem * 1);
+    --space-1: calc(1rem * (var(--line-ratio)));
+    --space-2: calc(1rem * (var(--line-ratio) * var(--line-ratio)));
+    --space-3: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --space-4: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --space-5: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --space-6: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --space-7: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --space-8: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --space-9: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --space-10: calc(1rem * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)))
 
     /* --spacing-0: 0; */
 }
@@ -46,3 +49,58 @@ html {
 body {
     line-height: var(--line-ratio);
 }
+
+/* Needs to more specific than most resets */
+
+body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, hr {
+    margin-top: var(--space);
+}
+
+/* background: rgba(20,230,245,0.1); */
+
+blockquote::before,
+    blockquote::after,
+    p::before,
+    p::after,
+    ul::before,
+    ul::after,
+    ol::before,
+    ol::after,
+    h1::before,
+    h1::after,
+    h2::before,
+    h2::after,
+    h3::before,
+    h3::after,
+    h4::before,
+    h4::after,
+    h5::before,
+    h5::after,
+    h6::before,
+    h6::after,
+    nav::before,
+    nav::after,
+    div > code::before,
+    div > code::after,
+    div > a::before,
+    div > a::after,
+    .Button::before,
+    .Button::after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+    }
+
+/* display: table; */
+
+blockquote::before, p::before, ul::before, ol::before, h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, nav::before, div > code::before, div > a::before, .Button::before {
+        margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
+    }
+
+blockquote::after, p::after, ul::after, ol::after, h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, nav::after, div > code::after, div > a::after, .Button::after {
+        margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
+
+
+        /* ^ Causing some issues with how the height is calculated. Adding display: table fixes this but causes some other issues also */
+    }

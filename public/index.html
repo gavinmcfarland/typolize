@@ -13,6 +13,23 @@
 
   <style>
 
+    :root {
+      --has-layout: var(--space);
+    }
+
+* > :first-child {
+    --space: var(--has-layout, 0);
+}
+
+.has-layout {
+    --has-layout: intial;
+}
+
+.has-layout > * > * {
+    --has-layout: var(--space);
+}
+
+
     /* ol {
       counter-reset: number;
       position: relative;
@@ -32,46 +49,28 @@
 
     body {
         font-family: Helvetica, sans-serif;
-        padding: var(--spacing-3);
-        margin: 0;
+        margin: var(--space-3);
     }
 
     h1, h2, h3, h4, h5, h6 {
       letter-spacing: -0.03em;
     }
 
-    .name {
-      font-size: var(--font-size-2);
-    }
-
     /* Remove default border from hr */
 
     hr {
         border: none;
+        margin-bottom: unset;
     }
 
     hr {
       border-bottom: 1px solid lightgrey;
     }
 
-    /* Remove first and last margins */
-
-    .remove-margin > :first-child {
-        margin-top: unset;
-    }
-
-    .remove-margin > :last-child {
-        margin-bottom: unset;
-    }
-
     /* Type sizing */
 
     body {
         font-size: var(--font-size-0);
-    }
-
-    body * + * {
-        margin-top: var(--spacing-1);
     }
 
     h1 {
@@ -108,59 +107,138 @@
 
     /* Element spacing */
 
-    h1, h2, h3, h4, h5 {
-        margin-top: var(--spacing-4);
-        margin-bottom: var(--spacing-2);
+    * {
+        --space: var(--space-1);
     }
 
-    hr {
-        margin-top: var(--spacing-2);
-        margin-bottom: var(--spacing-2);
+    h1 + * {
+        --space: var(--space-4);
     }
+
+    hr, hr + * {
+        --space: var(--space-4);
+    }
+
+
+
+
+
+
+
+
+
+    .name {
+      font-size: var(--font-size-2);
+      text-align: center;
+    }
+
+    .name + * {
+      --space: var(--space-1);
+    }
+
+    .tagline {
+      text-align: center;
+    }
+
+    
+
+    @media (min-width: 900px) {
+      [grid] {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        --has-layout: intial;
+        row-gap: var(--space-4);
+      }
+      /* [grid] > * > * {
+        --has-layout: var(--space);
+      } */
+      [grid] > * {
+        grid-column: 1 / -1;
+      }
+    }
+
+    
+
+    [span] {
+      --space: var(--has-layout, 0);
+    }
+
+    [span="1"] {
+      grid-column: span 2;
+    }
+
+    [span="2"] {
+      grid-column: span 2;
+    }
+
+    [span="3"] {
+      grid-column: span 4;
+    }
+
+    [span="4"] {
+      grid-column: span 4;
+    }
+
+    [span="5"] {
+      grid-column: span 5;
+    }
+
+    [span="6"] {
+      grid-column: span 6;
+    }
+
+    
+    
   </style>
 
 </head>
 
-<body class="remove-margin">
+<body>
     <h1 class="name">Typolize</h1>
-    <p>Normalizes type sizes and margins.</p>
+    <p class="tagline">Normalizes type sizes and spacing.</p>
     <hr></hr>
 
-    <div>
+    <div grid>
     
-    <h1>Heading 1</h1>
-    
-    <div>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <h6>Heading 6</h6>
+      <h6 span=2>Headings</h6>
       
-      <div>
-        <p>Paragraph</p>
-        <blockquote>Blockquote</blockquote>
+      <div span=4>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
       </div>
 
-    </div>
+      <h6 span=2>Text</h6>
 
-    <ul>
-      <li>A list item<br/>
-      with two lines</li>
-      <li>A list item</li>
-      <li>A list item</li>
-      <li>A list item</li>
-    </ul>
-
-    <ol>
-      <li>An ordered list item</li>
-      <li>An ordered list item</li>
-      <li>An ordered list item</li>
-      <li>An ordered list item</li>
-    </ol>
-    <div>
-        <p>Some paragraphs in a div</p>
-        <p>Some paragraphs in a div</p>
+      <div span=4>
+        <div>
+          <p>Paragraph</p>
+          <blockquote>Blockquote</blockquote>
+        </div>
+  
+        <ul>
+          <li>A list item<br/>
+          with two lines</li>
+          <li>A list item</li>
+          <li>A list item</li>
+          <li>A list item</li>
+        </ul>
+  
+        <ol>
+          <li>An ordered list item</li>
+          <li>An ordered list item</li>
+          <li>An ordered list item</li>
+          <li>An ordered list item</li>
+        </ol>
+        <div>
+            <p>Some paragraphs in a div</p>
+            <p>Some paragraphs in a div</p>
+        </div>
+      </div>
+      
     </div>
 </body>
 </html>
