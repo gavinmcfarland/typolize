@@ -221,15 +221,24 @@
     }
     
     
+    
   </style>
+
+<script>
+  document.addEventListener("keypress", function onEvent(event) {
+    if (event.key === "t") {
+      document.getElementById("demo").classList.toggle("type-guide")
+    }
+});
+</script>
 
 </head>
 
-<body class="space">
+<body id="demo">
     <div>
     <h1 class="name">Typolize</h1>
     <p class="tagline">Normalizes type sizes and spacing.</p>
-    
+    <p style="text-align: center; font-family: monospace">Type Background (T)</p>
     </div>
     
     <hr/>
