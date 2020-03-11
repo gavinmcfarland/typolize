@@ -32,15 +32,23 @@ small {
 
 ## Spacing
 
-Spacing is managed as a relationship between elements and is owned by containers. Apply spacing between elements using a custom property with a variable between `-2` and `10`.
+Spacing is managed as a relationship between elements. Apply spacing using a custom property with a variable between `-2` and `10`.
 
 ```css
-* + * {
+* {
     --spacing: var(--spacing-1);
 }
 
 h1 + * {
     --spacing: var(--spacing-4);
+}
+```
+
+Apply contextual spacing by using a class delimiter.
+
+```css
+.card > * {
+    --spacing: 0;
 }
 ```
 
