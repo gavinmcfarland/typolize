@@ -8,7 +8,7 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
   <link rel="stylesheet" href="typolize.css?v=1.0">
 
   <style>
@@ -17,8 +17,12 @@
       --has-layout: var(--spacing);
     }
 
-* > :first-child {
+/* * > :first-child {
     --spacing: var(--has-layout, 0);
+} */
+
+* > :first-child {
+    margin-top: unset;
 }
 
 .has-layout {
@@ -72,7 +76,7 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         --has-layout: initial;
-        row-gap: var(--spacing-4);
+        /* row-gap: var(--spacing-4); */
       }
       /* [grid] > * > * {
         --has-layout: var(--spacing);
@@ -81,10 +85,17 @@
         grid-column: 1 / -1;
       }
       [span] {
-      --spacing: 0;
+      /* --spacing: 0; */
       /* color: var(--has-layout, #FF0000); */
+        margin-top: unset;
+      }
+
+      [span] > :first-child {
+        margin-top: unset;
       }
     }
+
+    
 
     
 
@@ -127,7 +138,7 @@
     }
 
     h1 {
-        font-size: var(--font-size-6);
+        font-size: var(--font-size-7);
     }
 
     h2 {
@@ -158,10 +169,14 @@
         font-size: var(--font-size-0);
     }
 
+    body {
+        --spacing: var(--spacing-1);
+    }
+
     /* Element spacing */
 
-    * + * {
-        --spacing: var(--spacing-1);
+    * {
+      --spacing: var(--spacing-1)
     }
 
     h1 + * {
@@ -176,7 +191,7 @@
         --spacing: var(--spacing-4);
     }
 
-    div + h6 {
+    h6 + * {
       --spacing: var(--spacing-4)
     }
 
@@ -197,14 +212,20 @@
     
 
     
+    .container {
+      --spacing: var(--spacing-4);
+    }
 
+    .container > * {
+      --spacing: var(--spacing-4);
+    }
     
     
   </style>
 
 </head>
 
-<body>
+<body class="space">
     <div>
     <h1 class="name">Typolize</h1>
     <p class="tagline">Normalizes type sizes and spacing.</p>
@@ -213,47 +234,50 @@
     
     <hr/>
 
-    <div grid>
+    <div class="container">
     
-      <h6 span=2>Headings</h6>
-      
-      <div span=4>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-      </div>
-
-      <h6 span=2>Text</h6>
-
-      <div span=4>
-        <div>
-          <p>Paragraph</p>
-          <blockquote>Blockquote</blockquote>
-        </div>
-  
-        <ul>
-          <li>A list item<br/>
-          with two lines</li>
-          <li>A list item</li>
-          <li>A list item</li>
-          <li>A list item</li>
-        </ul>
-  
-        <ol>
-          <li>An ordered list item</li>
-          <li>An ordered list item</li>
-          <li>An ordered list item</li>
-          <li>An ordered list item</li>
-        </ol>
-        <div>
-            <p>Some paragraphs in a div</p>
-            <p>Some paragraphs in a div</p>
+      <div grid>
+        <h6 span=2>Headings</h6>
+        
+        <div span=4>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
         </div>
       </div>
-      
+
+      <div grid>
+        <h6 span=2>Text</h6>
+
+        <div span=4>
+          <div>
+            <p>Paragraph</p>
+            <blockquote>Blockquote</blockquote>
+          </div>
+    
+          <ul>
+            <li>A list item<br/>
+            with two lines</li>
+            <li>A list item</li>
+            <li>A list item</li>
+            <li>A list item</li>
+          </ul>
+    
+          <ol>
+            <li>An ordered list item</li>
+            <li>An ordered list item</li>
+            <li>An ordered list item</li>
+            <li>An ordered list item</li>
+          </ol>
+          <div>
+              <p>Some paragraphs in a div</p>
+              <p>Some paragraphs in a div</p>
+          </div>
+        </div>
+      <div>
     </div>
 </body>
 </html>

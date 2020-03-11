@@ -32,6 +32,12 @@ body {
     line-height: var(--line-ratio);
 }
 
+
+
+* {
+    margin-bottom: unset;
+}
+
 /* Needs to more specific than most resets */
 
 body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, hr {
@@ -41,7 +47,8 @@ body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 blockquote, p, ul, ol, h1, h2, h3, h4, h5, h6, nav, div > code, div > a, .Button {
 
     /* display: table; */
-    /* background: rgba(20,230,245,0.1); */
+    display: flow-root;
+    background: rgba(20,230,245,0.1);
 
     &::before,
     &::after {
@@ -61,4 +68,9 @@ blockquote, p, ul, ol, h1, h2, h3, h4, h5, h6, nav, div > code, div > a, .Button
 
         /* ^ Causing some issues with how the height is calculated. Adding display: table fixes this but causes some other issues also */
     }
+
+    
+
+    
+
 }
