@@ -1,6 +1,6 @@
 {
   "name": "typolize",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A style reset for creating perfect modular scale in typography and spacing",
   "main": "src/index.js",
   "scripts": {
