@@ -2,7 +2,7 @@
 
 Normalizes type sizing and spacing.
 
-Customise using the variables the following variables.
+Customise using the following variables.
 
 ```css
 :root {
