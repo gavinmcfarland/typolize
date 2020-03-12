@@ -117,5 +117,5 @@ blockquote::after, p::after, ul::after, ol::after, h1::after, h2::after, h3::aft
     }
 
 .type-guide blockquote, .type-guide p, .type-guide ul, .type-guide ol, .type-guide h1, .type-guide h2, .type-guide h3, .type-guide h4, .type-guide h5, .type-guide h6, .type-guide nav, .type-guide div > code, .type-guide div > a, .type-guide .Button  {
-    background: rgba(20,230,245,0.1);
+    background: rgba(0, 188, 212, 0.1);
 }
