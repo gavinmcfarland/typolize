@@ -1,20 +1,24 @@
 :root {
     /* Base values */
-    --root-size: 16px;
+    --font-base: 16px;
     --line-ratio: 1.5;
     --font-ratio: 1.333;
 
     /* Font height */
     --font-height: 0.75;
 
+    /* Spacing base */
+
+    --spacing-ratio: 1;
+
     /* Font sizes and spacing scales */
 
     @for $i from -2 to 10 {
-    --font-size-$(i): calc(1rem * pow(var(--font-ratio), $(i)));
+    --font-size-$(i): calc(var(--font-base) * pow(var(--font-ratio), $(i)));
     }
        
     @for $i from -2 to 10 {
-    --spacing-$(i): calc(1rem * pow(var(--line-ratio), $(i)));
+    --spacing-$(i): calc(1em * var(--spacing-ratio) * pow(var(--line-ratio), $(i)));
     }
 
     /* --spacing-0: 0; */
@@ -23,7 +27,7 @@
 /* Reset base font */
 
 html {
-    font-size: var(--root-size);
+    font-size: var(--font-base);
 }
 
 /* Apply line height to all elements */

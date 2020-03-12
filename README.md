@@ -6,9 +6,10 @@ Customise using the following variables.
 
 ```css
 :root {
-    --root-size: 16px;
-    --line-ratio: 1.5;
+    --font-base: 16px;
     --font-ratio: 1.333;
+    --line-ratio: 1.5;
+    --font-height: 0.75;
 }
 ```
 

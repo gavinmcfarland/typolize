@@ -5,8 +5,8 @@
   <meta charset="utf-8">
 
   <title>Typolize</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+
+  <meta name="viewport" content="width=device-width"/>
 
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
   <link rel="stylesheet" href="typolize.css?v=1.0">
@@ -33,32 +33,15 @@
     --has-layout: var(--spacing);
 }
 
-
-    /* ol {
-      counter-reset: number;
-      position: relative;
+@media (max-width: 600px) {
+      :root {
+        --spacing-ratio: 0.666 !important;
+      }
+      
     }
 
-    ol li {
-        counter-increment: number;
-        padding-left: var(--spacing-1);
-    }
 
-    ol li::before {
-        content: counter(number) ". ";
-        position: absolute;
-        left: 0;
-        text-align: left;	
-    } */
-
-    body {
-        font-family: Helvetica, sans-serif;
-        margin: var(--spacing-3);
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      letter-spacing: -0.03em;
-    }
+    
 
     /* Remove default border from hr */
 
@@ -71,6 +54,7 @@
       border-bottom: 1px solid lightgrey;
     }
 
+    /* Grids */
     @media (min-width: 900px) {
       [grid] {
         display: grid;
@@ -94,12 +78,6 @@
         margin-top: unset;
       }
     }
-
-    
-
-    
-
-    
 
     [span="1"] {
       grid-column: span 2;
@@ -128,10 +106,71 @@
 
 
 
+    /* Font styling */
+    body {
+        font-family: Helvetica, sans-serif;
+        margin: var(--spacing-3);
+        margin-top: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      letter-spacing: -0.03em;
+    }
+
+    :not(p) > code {
+      border: 1px solid;
+      padding: var(--spacing-1);
+      cursor: text;
+      overflow: scroll;
+    }
+
+    .Button {
+      border: 1px solid;
+      padding: var(--spacing-1);
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header {
+      padding: var(--spacing-5) 0;
+      border-bottom: 1px solid lightgrey;
+      margin-left: calc(0px - var(--spacing-3));
+      margin-right: calc(0px - var(--spacing-3));
+    }
+    .container {
+      margin-top: var(--spacing-5);
+    }
+
+    .container > div:not(:last-child) {
+      border-bottom: 1px solid lightgrey;
+      padding-left: var(--spacing-3);
+      padding-right: var(--spacing-3);
+      padding-bottom: var(--spacing-5);
+      margin-left: calc(0px - var(--spacing-3));
+      margin-right: calc(0px - var(--spacing-3));
+    }
+
+    .app-container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+
+
 
 
 
     /* Type sizing */
+
+    @media (max-width: 600px) {
+      :root {
+        --font-ratio: 1.2;
+      }
+      
+    }
 
     body {
         font-size: var(--font-size-0);
@@ -175,29 +214,23 @@
 
     /* Element spacing */
 
+   
+
     * {
       --spacing: var(--spacing-1)
-    }
-
-    h1 + * {
-        --spacing: var(--spacing-4);
     }
 
     hr, hr + * {
         --spacing: var(--spacing-4);
     }
 
-    h6 + * {
-        --spacing: var(--spacing-4);
-    }
-
-    h6 + * {
-      --spacing: var(--spacing-4)
+    code + * {
+      --spacing: var(--spacing-2);
     }
 
 
     .name {
-      font-size: var(--font-size-2);
+      font-size: var(--font-size-3);
       text-align: center;
     }
 
@@ -205,12 +238,20 @@
       --spacing: var(--spacing-1);
     }
 
+    .Button {
+      margin-top: var(--spacing-2);
+    }
+
     .tagline {
       text-align: center;
     }
 
     .container > * {
-      --spacing: var(--spacing-4);
+      --spacing: var(--spacing-5);
+    }
+
+    .container > div > h6 + * {
+      --spacing: var(--spacing-4)
     }
     
     
@@ -228,59 +269,127 @@
 </head>
 
 <body id="demo">
-    <div>
-    <h1 class="name">Typolize</h1>
-    <p class="tagline">Normalizes type sizes and spacing.</p>
-    <p style="text-align: center; font-family: monospace">Type Background (T)</p>
-    </div>
+    <div class="app-container">
+      <div class="header">
+        <h1 class="name">Typolize</h1>
+        <p class="tagline">Normalizes type sizes and spacing.</p>
+        </div>
     
-    <hr/>
+        <div class="container">
+          
+          <div grid>
+            <h6 span=2>Getting Started</h6>
+            <div span=4>
+              <p>Download from a CDN</p>
+              <code>
+                <pre>https://unpkg.com/typolize/dist/typolize.css</pre>
+              </code>
+    
+              <p>Or use in your node project using the following</p>
+              <code>
+                <pre>npm install typolize</pre>
+              </code>
+    
+              <p>And import into your stysheets</p>
+              <code>
+                <pre>@import 'typolize'</pre>
+              </code>
 
-    <div class="container">
+            </div>
+          </div>
+
+          <div grid>
+            <h6 span=2>How to Use</h6>
+            <div span=4>
+              <p>Customise the following variables to change modular scale of the type and spacing.</p>
+              <code>
+                <pre>:root {
+  --root-size: 16px;
+  --line-ratio: 1.5;
+  --font-ratio: 1.333;
+  --font-height: 0.75;
+}</pre>
+              </code>
+
+              <p>Set font sizing</p>
+
+              <code>
+                <pre>body {
+  font-size: var(--font-size-0);
+}
+
+h1 {
+  font-size: var(--font-size-6);
+}
+
+h2 {
+  font-size: var(--font-size-5);
+}
+
+...
+
+h6 {
+  font-size: var(--font-size-1);
+}
+</pre>
+              </code>
+              
+              <p>Set the spacing between elements.</p>
+
+              <code>
+                <pre>* {
+  --spacing: var(--spacing-1);
+}
+
+h1 + * {
+  --spacing: var(--spacing-2);
+}</pre>
+              </code>
+            </div>
+          </div>
+
+          <p style="text-align: center; font-family: monospace">(T) Toggle Type Background</p>
+
+          <div grid>
+            <h6 span=2>Examples</h6>
+            
+            <div span=4>
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
     
-      <div grid>
-        <h6 span=2>Headings</h6>
+              <div>
+                <p>Vivamus sed finibus diam. Aliquam facilisis dolor vitae gravida cursus. Duis a vulputate ante, id pellentesque dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis non arcu molestie, auctor risus sit amet, eleifend est. Mauris ac elementum felis, non aliquet massa. Nullam at ultrices quam. Cras <a href="/">efficitur finibus</a> erat, nec accumsan nulla luctus viverra. Vivamus odio lectus, convallis et gravida nec, tempus ac est. Ut bibendum posuere urna nec pharetra. Aenean placerat tincidunt risus non ultrices. Duis at dignissim ante, id aliquet nibh.</p>
+                <blockquote>Blockquote</blockquote>
+              </div>
         
-        <div span=4>
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
-        </div>
-      </div>
-
-      <div grid>
-        <h6 span=2>Text</h6>
-
-        <div span=4>
-          <div>
-            <p>Paragraph</p>
-            <blockquote>Blockquote</blockquote>
-          </div>
+              <ul>
+                <li>A list item<br/>
+                with two lines</li>
+                <li>A list item</li>
+                <li>A list item</li>
+                <li>A list item</li>
+              </ul>
+        
+              <ol>
+                <li>An ordered list item</li>
+                <li>An ordered list item</li>
+                <li>An ordered list item</li>
+                <li>An ordered list item</li>
+              </ol>
     
-          <ul>
-            <li>A list item<br/>
-            with two lines</li>
-            <li>A list item</li>
-            <li>A list item</li>
-            <li>A list item</li>
-          </ul>
-    
-          <ol>
-            <li>An ordered list item</li>
-            <li>An ordered list item</li>
-            <li>An ordered list item</li>
-            <li>An ordered list item</li>
-          </ol>
-          <div>
-              <p>Some paragraphs in a div</p>
-              <p>Some paragraphs in a div</p>
+              <div>
+                  <p>Some paragraphs in a div</p>
+                  <p>Some paragraphs in a div</p>
+              </div>
+            </div>
           </div>
         </div>
-      <div>
     </div>
+    
 </body>
 </html>
 

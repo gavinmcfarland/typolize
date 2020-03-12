@@ -1,0 +1,3 @@
+1. Best way to remove container top and bottom margins? Should in be on when layout is added, or should it be for all children of a container, or should it be for all children of divs, or should it be for all children of text elements. Dont forget there are two types. The containers margins and then the childrens first and last element margins.
+2. You can style spacing in a few different ways. Setting a default from the inside outwards, can be zero, or an ammount. The other option is styling outwards in.
+3. You could view these as two different types of spacing. Child spacing, and container level spacing. Or text spacing and block spacing.
