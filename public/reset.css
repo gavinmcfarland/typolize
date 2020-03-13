@@ -1,0 +1,16 @@
+/* Remove default border from hr */
+
+* {
+    margin-bottom: unset;
+    margin-top: unset;
+}
+
+hr {
+	border: none;
+	margin-bottom: unset;
+}
+
+
+code {
+	font-size: 0.9em;
+}

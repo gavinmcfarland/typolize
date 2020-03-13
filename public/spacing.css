@@ -1,0 +1,55 @@
+/* Element spacing */
+
+:not(html):not(body):not(div):not(section) {
+	margin-top: var(--em-1)
+}
+
+/* Remove top margin from all container items by default */
+[grid]>* {
+	margin-top: 0;
+}
+
+[grid]>*>:first-child {
+	margin-top: 0;
+}
+
+[grid]>*>:last-child {
+	margin-bottom: 0;
+}
+
+/* Remove margin from pre tag */
+pre {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: var(--em-1);
+}
+
+body {
+	/* --spacing: var(--em-1); */
+}
+
+hr {
+	margin-bottom: var(--em-4);
+}
+
+code {
+	margin-bottom: var(--em-2);
+}
+
+/* Component spacing */
+
+.Section__Title {
+	margin-bottom: var(--rem-4);
+}
+
+.Section__Content {
+	margin-bottom: var(--rem-5);
+}
+
+.Section__Text {
+	margin-bottom: var(--rem-5);
+	text-align: center;
+}
+

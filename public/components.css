@@ -1,0 +1,65 @@
+/* Elements */
+
+body {
+	margin: var(--rem-3);
+	margin-top: 0;
+}
+
+hr {
+	border-bottom: 1px solid lightgrey;
+}
+
+:not(p)>code {
+	border: 1px solid;
+	padding: var(--rem-1);
+	cursor: text;
+	overflow: scroll;
+}
+
+
+/* Components */
+
+.Button {
+	margin-top: var(--rem-2);
+}
+
+.Section {
+	/* --spacing: var(--spacing-4); */
+}
+
+.Button {
+	border: 1px solid;
+	padding: var(--rem-1);
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.Header {
+	padding: var(--rem-6) 0;
+	border-bottom: 1px solid lightgrey;
+}
+
+.Header .Header_Name {
+	margin-top: 0;
+	font-size: var(--font-size-5);
+	text-align: center;
+	margin-bottom: var(--rem-3);
+}
+
+.Header .Header_Tagline {
+	text-align: center;
+}
+
+.Container {
+	margin-top: var(--rem-5);
+}
+
+.Container>.Section:not(:last-child) {
+	/* border-bottom: 1px solid lightgrey; */
+	/* padding-left: var(--spacing-3); */
+	/* padding-right: var(--spacing-3); */
+	/* padding-bottom: var(--spacing-5); */
+	/* margin-left: calc(0px - var(--spacing-3)); */
+	/* margin-right: calc(0px - var(--spacing-3)); */
+}

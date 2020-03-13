@@ -1,308 +1,89 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
 
-  <title>Typolize</title>
+	<title>Typolize</title>
 
-  <meta name="viewport" content="width=device-width"/>
+	<meta name="viewport" content="width=device-width" />
 
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
-  <link rel="stylesheet" href="typolize.css?v=1.0">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="typolize.css?v=1.0">
+	<link rel="stylesheet" href="fonts.css">
+	<link rel="stylesheet" href="text.css">
+	<link rel="stylesheet" href="spacing.css">
+	<link rel="stylesheet" href="layout.css">
+	<link rel="stylesheet" href="props.css">
+	<link rel="stylesheet" href="components.css">
 
-  <style>
 
-    :root {
-      --has-layout: var(--spacing);
-    }
+	<style>
+		:root {
+			/* --font-ratio: 1.4; */
+			--has-layout: var(--spacing);
+		}
 
-/* * > :first-child {
+		@media (max-width: 600px) {
+			:root {
+				--spacing-ratio: 0.666 !important;
+			}
+
+		}
+
+		/* * > :first-child {
     --spacing: var(--has-layout, 0);
 } */
 
-* > :first-child {
+		/* * > :first-child {
     margin-top: unset;
-}
+} */
+	</style>
 
-.has-layout {
-    --has-layout: initial;
-}
-
-.has-layout > * > * {
-    --has-layout: var(--spacing);
-}
-
-@media (max-width: 600px) {
-      :root {
-        --spacing-ratio: 0.666 !important;
-      }
-      
-    }
-
-
-    
-
-    /* Remove default border from hr */
-
-    hr {
-        border: none;
-        margin-bottom: unset;
-    }
-
-    hr {
-      border-bottom: 1px solid lightgrey;
-    }
-
-    /* Grids */
-    @media (min-width: 900px) {
-      [grid] {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        --has-layout: initial;
-        gap: var(--spacing-4);
-      }
-      /* [grid] > * > * {
-        --has-layout: var(--spacing);
-      } */
-      [grid] > * {
-        grid-column: 1 / -1;
-      }
-      [span] {
-      /* --spacing: 0; */
-      /* color: var(--has-layout, #FF0000); */
-        margin-top: unset;
-      }
-
-      [span] > :first-child {
-        margin-top: unset;
-      }
-    }
-
-    [span="1"] {
-      grid-column: span 2;
-    }
-
-    [span="2"] {
-      grid-column: span 2;
-    }
-
-    [span="3"] {
-      grid-column: span 4;
-    }
-
-    [span="4"] {
-      grid-column: span 4;
-    }
-
-    [span="5"] {
-      grid-column: span 5;
-    }
-
-    [span="6"] {
-      grid-column: span 6;
-    }
-
-
-
-
-    /* Font styling */
-    body {
-        font-family: Helvetica, sans-serif;
-        margin: var(--spacing-3);
-        margin-top: 0;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      letter-spacing: -0.03em;
-    }
-
-    :not(p) > code {
-      border: 1px solid;
-      padding: var(--spacing-1);
-      cursor: text;
-      overflow: scroll;
-    }
-
-    .Button {
-      border: 1px solid;
-      padding: var(--spacing-1);
-      display: table;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .header {
-      padding: var(--spacing-5) 0;
-      border-bottom: 1px solid lightgrey;
-      margin-left: calc(0px - var(--spacing-3));
-      margin-right: calc(0px - var(--spacing-3));
-    }
-    .container {
-      margin-top: var(--spacing-5);
-    }
-
-    .container > div:not(:last-child) {
-      border-bottom: 1px solid lightgrey;
-      padding-left: var(--spacing-3);
-      padding-right: var(--spacing-3);
-      padding-bottom: var(--spacing-5);
-      margin-left: calc(0px - var(--spacing-3));
-      margin-right: calc(0px - var(--spacing-3));
-    }
-
-    .app-container {
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-
-
-
-
-
-
-    /* Type sizing */
-
-    @media (max-width: 600px) {
-      :root {
-        --font-ratio: 1.2;
-      }
-      
-    }
-
-    body {
-        font-size: var(--font-size-0);
-    }
-
-    h1 {
-        font-size: var(--font-size-7);
-    }
-
-    h2 {
-        font-size: var(--font-size-5);
-    }
-
-    h3 {
-        font-size: var(--font-size-4);
-    }
-
-    h4 {
-        font-size: var(--font-size-3);
-    }
-
-    h5 {
-        font-size: var(--font-size-2);
-    }
-
-    h6 {
-        font-size: var(--font-size-1);
-    }
-
-    p, blockquote {
-        font-size: var(--font-size-0);
-    }
-
-    ul, ol {
-        font-size: var(--font-size-0);
-    }
-
-    body {
-        --spacing: var(--spacing-1);
-    }
-
-    /* Element spacing */
-
-   
-
-    * {
-      --spacing: var(--spacing-1)
-    }
-
-    hr, hr + * {
-        --spacing: var(--spacing-4);
-    }
-
-    code + * {
-      --spacing: var(--spacing-2);
-    }
-
-
-    .name {
-      font-size: var(--font-size-3);
-      text-align: center;
-    }
-
-    .name + * {
-      --spacing: var(--spacing-1);
-    }
-
-    .Button {
-      margin-top: var(--spacing-2);
-    }
-
-    .tagline {
-      text-align: center;
-    }
-
-    .container > * {
-      --spacing: var(--spacing-5);
-    }
-
-    .container > div > h6 + * {
-      --spacing: var(--spacing-4)
-    }
-    
-    
-    
-  </style>
-
-<script>
-  document.addEventListener("keypress", function onEvent(event) {
-    if (event.key === "t") {
-      document.getElementById("demo").classList.toggle("type-guide")
-    }
-});
-</script>
+	<script>
+		document.addEventListener("keypress", function onEvent(event) {
+			if (event.key === "t") {
+				document.getElementById("demo").classList.toggle("type-guide")
+			}
+		});
+	</script>
 
 </head>
 
 <body id="demo">
-    <div class="app-container">
-      <div class="header">
-        <h1 class="name">Typolize</h1>
-        <p class="tagline">Normalizes type sizes and spacing.</p>
-        </div>
-    
-        <div class="container">
-          
-          <div grid>
-            <h6 span=2>Getting Started</h6>
-            <div span=4>
-              <p>Download from a CDN</p>
-              <code>
+	<div class="App">
+		<div class="Header">
+			<h1 class="Header_Name">Typolize.</h1>
+			<p class="Header_Tagline">Normalizes type sizes and spacing.</p>
+		</div>
+
+		<div class="Container spacing spacing-5">
+
+			<section class="Section" grid>
+				<h2 class="Section__Title" span="3">Getting Started</h2>
+				<div class="Section__Content" span="5">
+					<p>Download from a CDN</p>
+					<code>
                 <pre>https://unpkg.com/typolize/dist/typolize.css</pre>
               </code>
-    
-              <p>Or use in your node project using the following</p>
-              <code>
+
+					<p>Or use in your node project using the following</p>
+					<code>
                 <pre>npm install typolize</pre>
               </code>
-    
-              <p>And import into your stysheets</p>
-              <code>
+
+					<p>And import into your stysheets</p>
+					<code>
                 <pre>@import 'typolize'</pre>
               </code>
 
-            </div>
-          </div>
-
-          <div grid>
-            <h6 span=2>How to Use</h6>
-            <div span=4>
-              <p>Customise the following variables to change modular scale of the type and spacing.</p>
-              <code>
+				</div>
+				<h2 class="Section__Title" span=3>How to Use</h2>
+				<div class="Section__Content" span=5>
+					<p>Customise the following variables to change modular scale of the type and spacing.</p>
+					<code>
                 <pre>:root {
   --font-base: 16px;
   --font-ratio: 1.333;
@@ -311,9 +92,9 @@
 }</pre>
               </code>
 
-              <p>Set font sizing</p>
+					<p>Set font sizing</p>
 
-              <code>
+					<code>
                 <pre>body {
   font-size: var(--font-size-0);
 }
@@ -333,10 +114,10 @@ h6 {
 }
 </pre>
               </code>
-              
-              <p>Set the spacing between elements.</p>
 
-              <code>
+					<p>Set the spacing between elements.</p>
+
+					<code>
                 <pre>* {
   --spacing: var(--spacing-1);
 }
@@ -345,53 +126,56 @@ h1 + * {
   --spacing: var(--spacing-2);
 }</pre>
               </code>
-            </div>
-          </div>
+				</div>
 
-          <p style="text-align: center; font-family: monospace">(T) Toggle Type Background</p>
+				<p class="Section__Text">(T) Toggle Type Background</p>
 
-          <div grid>
-            <h6 span=2>Examples</h6>
-            
-            <div span=4>
-              <h1>Heading 1</h1>
-              <h2>Heading 2</h2>
-              <h3>Heading 3</h3>
-              <h4>Heading 4</h4>
-              <h5>Heading 5</h5>
-              <h6>Heading 6</h6>
-    
-              <div>
-                <p>Vivamus sed finibus diam. Aliquam facilisis dolor vitae gravida cursus. Duis a vulputate ante, id pellentesque dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis non arcu molestie, auctor risus sit amet, eleifend est. Mauris ac elementum felis, non aliquet massa. Nullam at ultrices quam. Cras <a href="/">efficitur finibus</a> erat, nec accumsan nulla luctus viverra. Vivamus odio lectus, convallis et gravida nec, tempus ac est. Ut bibendum posuere urna nec pharetra. Aenean placerat tincidunt risus non ultrices. Duis at dignissim ante, id aliquet nibh.</p>
-                <blockquote>Blockquote</blockquote>
-              </div>
-        
-              <ul>
-                <li>A list item<br/>
-                with two lines</li>
-                <li>A list item</li>
-                <li>A list item</li>
-                <li>A list item</li>
-              </ul>
-        
-              <ol>
-                <li>An ordered list item</li>
-                <li>An ordered list item</li>
-                <li>An ordered list item</li>
-                <li>An ordered list item</li>
-              </ol>
-    
-              <div>
-                  <p>Some paragraphs in a div</p>
-                  <p>Some paragraphs in a div</p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-    
+				<h2 class="Section__Title" span=3>Examples</h2>
+
+				<div class="Section__Content" span=5>
+					<span></span>
+					<h1>Heading 1</h1>
+					<h2>Heading 2</h2>
+					<h3>Heading 3</h3>
+					<h4>Heading 4</h4>
+					<h5>Heading 5</h5>
+					<h6>Heading 6</h6>
+
+					<p>Vivamus sed finibus diam. Aliquam facilisis dolor vitae gravida cursus. Duis a vulputate
+						ante, id
+						pellentesque dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis non
+						arcu molestie,
+						auctor risus sit amet, eleifend est. Mauris ac elementum felis, non aliquet massa. Nullam at
+						ultrices
+						quam. Cras <a href="/">efficitur finibus</a> erat, nec accumsan nulla luctus viverra.
+						Vivamus odio lectus,
+						convallis et gravida nec, tempus ac est. Ut bibendum posuere urna nec pharetra. Aenean
+						placerat tincidunt
+						risus non ultrices. Duis at dignissim ante, id aliquet nibh.</p>
+					<blockquote>Blockquote</blockquote>
+
+					<ul>
+						<li>A list item<br />
+							with two lines</li>
+						<li>A list item</li>
+						<li>A list item</li>
+						<li>A list item</li>
+					</ul>
+
+					<ol>
+						<li>An ordered list item</li>
+						<li>An ordered list item</li>
+						<li>An ordered list item</li>
+						<li>An ordered list item</li>
+					</ol>
+
+					<p>Some paragraphs in a div</p>
+					<p>Some paragraphs in a div</p>
+				</div>
+			</section>
+		</div>
+	</div>
+
 </body>
+
 </html>
-
-
-
