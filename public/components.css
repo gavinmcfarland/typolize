@@ -28,11 +28,12 @@ p>code {
 /* Component spacing */
 
 .Section__Title {
-	margin-bottom: var(--rem-4);
+	/* margin-bottom: var(--rem-4); */
+	font-size: var(--type-h3);
 }
 
 .Section__Content {
-	margin-bottom: var(--rem-5);
+	margin-bottom: var(--rem-6);
 }
 
 .Section__Text {
@@ -62,7 +63,7 @@ p>code {
 }
 
 .Button:hover {
-	background-color: grey;
+	background-color: hsla(0, 0%, 50%, 0.5);;
 }
 
 .Header {

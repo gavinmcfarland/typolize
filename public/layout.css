@@ -20,7 +20,7 @@
 	display: grid;
 	/* To avoid issue with contents of grid pushing out of container when width of container smaller than content */
 	grid-template-columns: repeat(auto-fit, 100%);
-	column-gap: var(--rem-1);
+	column-gap: var(--rem-2);
 }
 
 [grid]>* {

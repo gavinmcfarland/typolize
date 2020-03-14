@@ -85,11 +85,11 @@ blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
     }
 
     &::before {
-        margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.48em);
+        margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
     }
 
     &::after {
-        margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.456em);
+        margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
     }
 }
 
@@ -107,5 +107,5 @@ blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
 }
 
 .type-guide blockquote, .type-guide p, .type-guide ul, .type-guide ol, .type-guide h1, .type-guide h2, .type-guide h3, .type-guide h4, .type-guide h5, .type-guide h6, .type-guide nav, .type-guide div > code, .type-guide div > a, .type-guide .Button, .type-guide pre  {
-    background: rgba(0, 188, 212, 0.1);
+    background: hsla(187, 100%, 76%, 0.12);
 }

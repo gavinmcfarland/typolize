@@ -12,7 +12,7 @@ body {
 }
 
 hr {
-	margin-bottom: var(--em-5);
+	margin-bottom: var(--rem-5);
 }
 
 code {
