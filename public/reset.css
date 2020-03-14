@@ -17,6 +17,9 @@ code {
 
 	/* Random bug where square appears in top right hand corner? */
 	-webkit-appearance: none;
+
+	/* Tries to normalize size of font family */
+	font-size: 0.9em;
 }
 
 :not(p)>code {

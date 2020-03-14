@@ -71,7 +71,6 @@ html, body, section, div {
 /* Needs to more specific than most resets */
 
 blockquote, p, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
-    /* display: table; */
     display: flow-root;
 }
 
@@ -91,15 +90,20 @@ blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
 
     &::after {
         margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
-
-
-        /* ^ Causing some issues with how the height is calculated. Adding display: table fixes this but causes some other issues also */
     }
+}
 
+@-moz-document url-prefix() {
+	blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
 
+		&::before {
+			margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.4em);
+		}
 
-
-
+		&::after {
+			margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.6em);
+		}
+	}
 }
 
 .type-guide blockquote, .type-guide p, .type-guide ul, .type-guide ol, .type-guide h1, .type-guide h2, .type-guide h3, .type-guide h4, .type-guide h5, .type-guide h6, .type-guide nav, .type-guide div > code, .type-guide div > a, .type-guide .Button, .type-guide pre  {
