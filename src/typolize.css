@@ -7,8 +7,7 @@
     /* Font height */
     --font-height: 0.75;
 
-    /* Spacing base */
-
+    /* Spacing ratio */
     --spacing-ratio: 1;
 
     /* Font sizes and spacing scales */
@@ -28,6 +27,20 @@
     /* --em-0: 0; */
 }
 
+:root {
+	--type-body: var(--font-size-0);
+	--type-h1: var(--font-size-7);
+	--type-h2: var(--font-size-5);
+	--type-h3: var(--font-size-3);
+	--type-h4: var(--font-size-2);
+	--type-h5: var(--font-size-1);
+	--type-h6: var(--font-size-0);
+	--type-p: var(--type-body);
+	--type-blockquote: var(--type-body);
+	--type-ul: var(--type-body);
+	--type-ol: var(--type-ul);
+}
+
 /* Reset base font */
 
 html {
@@ -40,12 +53,29 @@ body {
     line-height: var(--line-ratio);
 }
 
+/* Element spacing */
+
+* {
+	margin-top: var(--em-1);
+}
+
+h1, h2, h3, h4, h5, h5, h6 {
+	margin-bottom: var(--em-1);
+}
+
+html, body, section, div {
+	margin-top: unset;
+	margin-bottom: unset;
+}
+
 /* Needs to more specific than most resets */
 
-blockquote, p, ul, ol, h1, h2, h3, h4, h5, h6, nav, div > code, div > a, .Button, pre {
-
+blockquote, p, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
     /* display: table; */
     display: flow-root;
+}
+
+blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
 
     &::before,
     &::after {

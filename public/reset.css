@@ -1,8 +1,8 @@
 /* Remove default border from hr */
 
 * {
-    margin-bottom: unset;
-    margin-top: unset;
+    margin: unset;
+	box-sizing: border-box;
 }
 
 hr {
@@ -10,7 +10,15 @@ hr {
 	margin-bottom: unset;
 }
 
-
 code {
-	font-size: 0.9em;
+	/* Need a way to correct line-height. */
+	/* font-size: 0.9em; */
+	vertical-align: inherit;
+
+	/* Random bug where square appears in top right hand corner? */
+	-webkit-appearance: none;
+}
+
+:not(p)>code {
+	display: block;
 }

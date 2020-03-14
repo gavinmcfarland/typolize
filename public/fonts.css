@@ -1,6 +1,7 @@
 /* Font styling */
 body {
 	font-family: Helvetica, sans-serif;
+	tab-size: 2;
 }
 
 h1,

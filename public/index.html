@@ -12,7 +12,9 @@
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="typolize.css?v=1.0">
+	<link rel="stylesheet" href="default-spacing.css">
 	<link rel="stylesheet" href="fonts.css">
+	<link rel="stylesheet" href="colors.css">
 	<link rel="stylesheet" href="text.css">
 	<link rel="stylesheet" href="spacing.css">
 	<link rel="stylesheet" href="layout.css">
@@ -54,12 +56,13 @@
 
 <body id="demo">
 	<div class="App">
-		<div class="Header">
+		<div class="Header fullwidth">
 			<h1 class="Header_Name">Typolize.</h1>
 			<p class="Header_Tagline">Normalizes type sizes and spacing.</p>
+			<a class="Button" href="https://github.com/limitlessloop/typolize">View on Github</a>
 		</div>
 
-		<div class="Container spacing spacing-5">
+		<div class="Container">
 
 			<section class="Section" grid>
 				<h2 class="Section__Title" span="3">Getting Started</h2>
@@ -80,57 +83,57 @@
               </code>
 
 				</div>
+
+				<hr class="fullwidth" />
+
 				<h2 class="Section__Title" span=3>How to Use</h2>
 				<div class="Section__Content" span=5>
 					<p>Customise the following variables to change modular scale of the type and spacing.</p>
 					<code>
                 <pre>:root {
   --font-base: 16px;
-  --font-ratio: 1.333;
   --line-ratio: 1.5;
-  --font-height: 0.75;
+  --font-ratio: 1.333;
+  --spacing-ratio: 1;
 }</pre>
               </code>
 
-					<p>Set font sizing</p>
+					<p>Configure the typesetting</p>
 
 					<code>
-                <pre>body {
-  font-size: var(--font-size-0);
-}
-
-h1 {
-  font-size: var(--font-size-6);
-}
-
-h2 {
-  font-size: var(--font-size-5);
-}
-
-...
-
-h6 {
-  font-size: var(--font-size-1);
+                <pre>:root {
+	--type-body: var(--font-size-0);
+	--type-h1: var(--font-size-7);
+	--type-h2: var(--font-size-5);
+	--type-h3: var(--font-size-3);
+	--type-h4: var(--font-size-2);
+	--type-h5: var(--font-size-1);
+	--type-h6: var(--font-size-0);
+	--type-p: var(--type-body);
+	--type-blockquote: var(--type-body);
+	--type-ul: var(--type-body);
+	--type-ol: var(--type-ul);
 }
 </pre>
               </code>
 
-					<p>Set the spacing between elements.</p>
-
+					<p>To manage spacing choose from either em or rem spacing variables <code>var(--em-<-2..10>)</code>
+						</code> and <code>var(--rem-<-2..10>)</code> ranging anywhere between <code>-2</code> and
+						<code>10</code>.</p>
+					<p>For example:</p>
 					<code>
-                <pre>* {
-  --spacing: var(--spacing-1);
-}
-
-h1 + * {
-  --spacing: var(--spacing-2);
+                <pre>code {
+	margin-top: var(--em-1);
+	margin-bottom: var(--em-2);
 }</pre>
               </code>
 				</div>
 
+				<hr class="fullwidth" />
+
 				<p class="Section__Text">(T) Toggle Type Background</p>
 
-				<h2 class="Section__Title" span=3>Examples</h2>
+				<h2 class="Section__Title" span=3>Type Preview</h2>
 
 				<div class="Section__Content" span=5>
 					<span></span>
@@ -141,36 +144,26 @@ h1 + * {
 					<h5>Heading 5</h5>
 					<h6>Heading 6</h6>
 
-					<p>Vivamus sed finibus diam. Aliquam facilisis dolor vitae gravida cursus. Duis a vulputate
-						ante, id
-						pellentesque dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis non
-						arcu molestie,
-						auctor risus sit amet, eleifend est. Mauris ac elementum felis, non aliquet massa. Nullam at
-						ultrices
-						quam. Cras <a href="/">efficitur finibus</a> erat, nec accumsan nulla luctus viverra.
-						Vivamus odio lectus,
-						convallis et gravida nec, tempus ac est. Ut bibendum posuere urna nec pharetra. Aenean
-						placerat tincidunt
-						risus non ultrices. Duis at dignissim ante, id aliquet nibh.</p>
-					<blockquote>Blockquote</blockquote>
+					<p>A major area of debate involves consequentialism, in which actions are judged by the potential
+						results of the act, such as to maximize happiness, called utilitarianism, and deontology, in
+						which actions are judged by how they adhere to principles, irrespective of negative ends.</p>
 
 					<ul>
-						<li>A list item<br />
-							with two lines</li>
-						<li>A list item</li>
-						<li>A list item</li>
-						<li>A list item</li>
+						<li>Lists</li>
+						<li>Films</li>
+						<li>Books</li>
+						<li>Film about books</li>
+						<li>Lists of books on films</li>
+						<li>Film about lists</li>
 					</ul>
 
 					<ol>
-						<li>An ordered list item</li>
-						<li>An ordered list item</li>
-						<li>An ordered list item</li>
-						<li>An ordered list item</li>
+						<li>Biological process, a process of a living organism</li>
+						<li>Cognitive process, such as attention, memory, language use, reasoning, and problem solving
+						</li>
+						<li>Mental process, a function or processes of the mind</li>
+						<li>Neuronal process, also neurite, a projection from the cell body of a neuron</li>
 					</ol>
-
-					<p>Some paragraphs in a div</p>
-					<p>Some paragraphs in a div</p>
 				</div>
 			</section>
 		</div>

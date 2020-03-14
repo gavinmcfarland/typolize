@@ -7,8 +7,7 @@
     /* Font height */
     --font-height: 0.75;
 
-    /* Spacing base */
-
+    /* Spacing ratio */
     --spacing-ratio: 1;
 
     /* Font sizes and spacing scales */
@@ -55,6 +54,20 @@
     /* --em-0: 0; */
 }
 
+:root {
+	--type-body: var(--font-size-0);
+	--type-h1: var(--font-size-7);
+	--type-h2: var(--font-size-5);
+	--type-h3: var(--font-size-3);
+	--type-h4: var(--font-size-2);
+	--type-h5: var(--font-size-1);
+	--type-h6: var(--font-size-0);
+	--type-p: var(--type-body);
+	--type-blockquote: var(--type-body);
+	--type-ul: var(--type-body);
+	--type-ol: var(--type-ul);
+}
+
 /* Reset base font */
 
 html {
@@ -67,27 +80,34 @@ body {
     line-height: var(--line-ratio);
 }
 
+/* Element spacing */
+
+* {
+	margin-top: var(--em-1);
+}
+
+h1, h2, h3, h4, h5, h5, h6 {
+	margin-bottom: var(--em-1);
+}
+
+html, body, section, div {
+	margin-top: unset;
+	margin-bottom: unset;
+}
+
 /* Needs to more specific than most resets */
 
-blockquote, p, ul, ol, h1, h2, h3, h4, h5, h6, nav, div > code, div > a, .Button, pre {
-
+blockquote, p, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
     /* display: table; */
     display: flow-root;
-
-
-
-
-
 }
 
 blockquote::before,
     blockquote::after,
     p::before,
     p::after,
-    ul::before,
-    ul::after,
-    ol::before,
-    ol::after,
+    li::before,
+    li::after,
     h1::before,
     h1::after,
     h2::before,
@@ -102,8 +122,6 @@ blockquote::before,
     h6::after,
     nav::before,
     nav::after,
-    div > code::before,
-    div > code::after,
     div > a::before,
     div > a::after,
     .Button::before,
@@ -116,11 +134,11 @@ blockquote::before,
         width: 0;
     }
 
-blockquote::before, p::before, ul::before, ol::before, h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, nav::before, div > code::before, div > a::before, .Button::before, pre::before {
+blockquote::before, p::before, li::before, h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, nav::before, div > a::before, .Button::before, pre::before {
         margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
     }
 
-blockquote::after, p::after, ul::after, ol::after, h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, nav::after, div > code::after, div > a::after, .Button::after, pre::after {
+blockquote::after, p::after, li::after, h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, nav::after, div > a::after, .Button::after, pre::after {
         margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
 
 

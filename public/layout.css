@@ -1,4 +1,16 @@
 
+/* Remove top margin from all container items by default */
+[grid]>* {
+	margin-top: 0;
+}
+
+[grid]>*>:first-child {
+	margin-top: 0;
+}
+
+[grid]>*>:last-child {
+	margin-bottom: 0;
+}
 
 /* [span]> :first-child {
 	margin-top: unset;
@@ -6,6 +18,8 @@
 
 [grid] {
 	display: grid;
+	/* To avoid issue with contents of grid pushing out of container when width of container smaller than content */
+	grid-template-columns: repeat(auto-fit, 100%);
 	column-gap: var(--rem-1);
 }
 
@@ -64,9 +78,39 @@
 
 
 
+/* Break out of max-width */
+
+body {
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+}
 
 .App {
-	/* max-width: 1200px; */
+	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: inherit;
+	padding-right: inherit;
+	box-sizing: content-box;
+
+
+
+	width: 100%;
+	flex-grow: 1;
+	flex-shrink: 0;
 }
+
+
+.fullwidth {
+	max-width: none !important;
+    width: 100vw;
+    box-sizing: border-box;
+	position: relative;
+	/* margin-left: calc(var(--container-margin) * -1); */
+    left: 50%;
+	transform: translate(-50vw);
+	padding-left: inherit;
+	padding-right: inherit;
+}
+

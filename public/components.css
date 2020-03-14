@@ -1,19 +1,43 @@
 /* Elements */
 
 body {
-	margin: var(--rem-3);
-	margin-top: 0;
+	padding-left: var(--rem-3);
+	padding-right: var(--rem-3);
+	margin: 0;
 }
 
 hr {
 	border-bottom: 1px solid lightgrey;
 }
 
-:not(p)>code {
+code {
 	border: 1px solid;
-	padding: var(--rem-1);
 	cursor: text;
+}
+
+p>code {
+	padding-left: var(--rem--2);
+	padding-right: var(--rem--2);
+}
+
+:not(p)>code {
+	padding: var(--rem-1);
 	overflow: scroll;
+}
+
+/* Component spacing */
+
+.Section__Title {
+	margin-bottom: var(--rem-4);
+}
+
+.Section__Content {
+	margin-bottom: var(--rem-5);
+}
+
+.Section__Text {
+	margin-bottom: var(--rem-5);
+	text-align: center;
 }
 
 
@@ -33,6 +57,12 @@ hr {
 	display: table;
 	margin-left: auto;
 	margin-right: auto;
+	text-decoration: none;
+	/* border-radius: 9999px; */
+}
+
+.Button:hover {
+	background-color: grey;
 }
 
 .Header {

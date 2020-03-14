@@ -1,0 +1,40 @@
+:root {
+	--silver: silver;
+	--green: #00B031;
+	--blue: #0094FF;
+	--red: red;
+	--black: black;
+	--purple: #7642B9;
+	--brown: #A28570;
+	--grey: grey;
+	--pink: #FD6086;
+	--dark: #0E0614;
+	--white: #FFFFFF;
+	--yellow: #CA9100;
+
+	--color: var(--black);
+	--background-color: var(--dark);
+	--border-color: var(--black);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		background-color: var(--black);
+		color: var(--white);
+		--border-color: var(--white);
+	}
+	a {
+		color: white;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		background-color: var(--white);
+		color: var(--black);
+		--border-color: var(--black);
+	}
+	a {
+		color: black;
+	}
+}
