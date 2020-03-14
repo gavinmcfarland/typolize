@@ -24,19 +24,19 @@
     --font-size-8: calc(var(--font-base) * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
     --font-size-9: calc(var(--font-base) * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
     --font-size-10: calc(var(--font-base) * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
-    --em--2: calc(1em * var(--spacing-ratio) * (1 / (var(--line-ratio) * var(--line-ratio))));
-    --em--1: calc(1em * var(--spacing-ratio) * (1 / (var(--line-ratio))));
-    --em-0: calc(1em * var(--spacing-ratio) * 1);
-    --em-1: calc(1em * var(--spacing-ratio) * (var(--line-ratio)));
-    --em-2: calc(1em * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio)));
-    --em-3: calc(1em * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --em-4: calc(1em * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --em-5: calc(1em * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --em-6: calc(1em * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --em-7: calc(1em * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --em-8: calc(1em * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --em-9: calc(1em * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
-    --em-10: calc(1em * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --em--2: calc(1em * (1 / (var(--line-ratio) * var(--line-ratio))));
+    --em--1: calc(1em * (1 / (var(--line-ratio))));
+    --em-0: calc(1em * 1);
+    --em-1: calc(1em * (var(--line-ratio)));
+    --em-2: calc(1em * (var(--line-ratio) * var(--line-ratio)));
+    --em-3: calc(1em * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --em-4: calc(1em * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --em-5: calc(1em * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --em-6: calc(1em * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --em-7: calc(1em * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --em-8: calc(1em * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --em-9: calc(1em * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
+    --em-10: calc(1em * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
 	--rem--2: calc(1rem * var(--spacing-ratio) * (1 / (var(--line-ratio) * var(--line-ratio))));
 	--rem--1: calc(1rem * var(--spacing-ratio) * (1 / (var(--line-ratio))));
 	--rem-0: calc(1rem * var(--spacing-ratio) * 1);
@@ -134,11 +134,11 @@ blockquote::before,
     }
 
 blockquote::before, p::before, li::before, h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, nav::before, div > a::before, .Button::before, pre::before {
-        margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
+        margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.48em);
     }
 
 blockquote::after, p::after, li::after, h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, nav::after, div > a::after, .Button::after, pre::after {
-        margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
+        margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.456em);
     }
 
 @-moz-document url-prefix() {

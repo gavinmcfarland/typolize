@@ -17,7 +17,7 @@
     }
 
     @for $i from -2 to 10 {
-    --em-$(i): calc(1em * var(--spacing-ratio) * pow(var(--line-ratio), $(i)));
+    --em-$(i): calc(1em * pow(var(--line-ratio), $(i)));
 	}
 
 	@for $i from -2 to 10 {
@@ -85,11 +85,11 @@ blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
     }
 
     &::before {
-        margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
+        margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.48em);
     }
 
     &::after {
-        margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
+        margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.456em);
     }
 }
 

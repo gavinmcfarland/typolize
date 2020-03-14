@@ -22,7 +22,7 @@ p>code {
 
 :not(p)>code {
 	padding: var(--rem-1);
-	overflow: scroll;
+	overflow-x: scroll;
 }
 
 /* Component spacing */
