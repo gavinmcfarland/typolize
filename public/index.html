@@ -50,6 +50,10 @@
 				document.getElementById("demo").classList.toggle("type-guide")
 			}
 		});
+
+		function myFunction() {
+			var element = document.getElementById("demo").classList.toggle("type-guide");
+		}
 	</script>
 
 </head>
@@ -131,7 +135,7 @@
 
 				<hr class="fullwidth" />
 
-				<p class="Section__Text">(T) Toggle Type Background</p>
+				<p id="guide" onclick="myFunction()" class="Section__Text">(T) Toggle Type Background</p>
 
 				<h2 class="Section__Title" span=3>Type Preview</h2>
 
