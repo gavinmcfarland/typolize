@@ -27,15 +27,15 @@ Customise the scales and contrast between different type elements by changing th
 
 ```css
 :root {
-	--font-size-body: var(--font-size-0);
-	--font-size-h1: var(--font-size-7);
-	--font-size-h2: var(--font-size-5);
-	--font-size-h3: var(--font-size-3);
-	--font-size-h4: var(--font-size-2);
-	--font-size-h5: var(--font-size-1);
-	--font-size-h6: var(--font-size-0);
-	--font-size-p: var(--font-size-body);
-	--font-size-ul: var(--font-size-body);
+    --font-size-body: var(--font-size-0);
+    --font-size-h1: var(--font-size-7);
+    --font-size-h2: var(--font-size-5);
+    --font-size-h3: var(--font-size-3);
+    --font-size-h4: var(--font-size-2);
+    --font-size-h5: var(--font-size-1);
+    --font-size-h6: var(--font-size-0);
+    --font-size-p: var(--font-size-body);
+    --font-size-ul: var(--font-size-body);
     --font-size-ol: var(--font-size-ul);
     --font-size-blockquote: var(--font-size-body);
 }
