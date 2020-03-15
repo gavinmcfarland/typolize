@@ -11,16 +11,17 @@ hr {
 }
 
 code {
-	border: 1px solid;
 	cursor: text;
 }
 
 p>code {
 	padding-left: var(--rem--2);
 	padding-right: var(--rem--2);
+	white-space: nowrap;
 }
 
 :not(p)>code {
+	border: 1px solid;
 	padding: var(--rem-1);
 	overflow-x: scroll;
 }
@@ -70,7 +71,7 @@ p>code {
 .Header {
 	display: flex;
 
-	height: var(--rem-8);
+	height: var(--rem-9);
 	/* padding: var(--rem-6) 0; */
 	border-bottom: 1px solid lightgrey;
 	flex-wrap: wrap;
@@ -89,7 +90,8 @@ p>code {
 	margin-top: 0;
 	font-size: var(--font-size-5);
 	text-align: center;
-	margin-bottom: var(--em--1);
+	margin-bottom: var(--rem-4);
+	margin-right: -0.15em
 }
 
 .Header .Header_Tagline {
@@ -108,4 +110,22 @@ p>code {
 	/* padding-bottom: var(--spacing-5); */
 	/* margin-left: calc(0px - var(--spacing-3)); */
 	/* margin-right: calc(0px - var(--spacing-3)); */
+}
+
+.Footer {
+	display: flex;
+	margin-bottom: var(--rem-3);
+
+}
+
+.Footer > * {
+	margin: 0;
+}
+
+.Footer > *:first-child {
+	margin-right: var(--rem-1);
+}
+
+.Header_Link {
+	margin-left: auto;
 }

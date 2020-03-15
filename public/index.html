@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Typolize</title>
+	<title>Typolize - Normalizes typography and spacing harmoniously.</title>
 
 	<meta name="viewport" content="width=device-width" />
 
@@ -23,18 +23,35 @@
 
 
 	<style>
-		@media (max-width: 600px) {
+		@media (max-width: 900px) and (orientation: portrait) {
 			:root {
-				--spacing-ratio: 0.666 !important;
+				--spacing-ratio: 0.666;
 			}
-
 		}
 
-		@media (max-width: 600px) {
+		@media (max-width: 900px) and (orientation: landscape) {
+			:root {
+				--spacing-ratio: 0.5;
+			}
+		}
+
+		@media (min-width: 1500px) {
+			:root {
+				--font-base: 18px;
+			}
+		}
+
+		@media (max-width: 375px) {
+			:root {
+				--font-base: 14px;
+				--spacing-ratio: 0.5;
+			}
+		}
+
+		@media (max-width: 900px) {
 			:root {
 				--font-ratio: 1.2;
 			}
-
 		}
 	</style>
 
@@ -56,7 +73,7 @@
 	<div class="App">
 		<div class="Header fullwidth">
 			<h1 class="Header_Name">Typolize.</h1>
-			<p class="Header_Tagline">Normalizes type sizes and spacing.</p>
+			<p class="Header_Tagline">Normalizes typography and spacing harmoniously.</p>
 			<a class="Button" href="https://github.com/limitlessloop/typolize">View on Github</a>
 		</div>
 
@@ -96,27 +113,29 @@
 }</pre>
               </code>
 
-					<p>Configure the font sizes</p>
+					<p>Configure the default typesetting by setting the font sizes</p>
 
 					<code>
-                <pre>:root {
-	--font-size-body: var(--font-size-0);
-	--font-size-h1: var(--font-size-7);
-	--font-size-h2: var(--font-size-5);
-	--font-size-h3: var(--font-size-3);
-	--font-size-h4: var(--font-size-2);
-	--font-size-h5: var(--font-size-1);
-	--font-size-h6: var(--font-size-0);
-	--font-size-p: var(--font-size-body);
-	--font-size-ul: var(--font-size-body);
-	--font-size-ol: var(--font-size-ul);
-	--font-size-blockquote: var(--font-size-body);
+		  <pre>:root {
+--font-size-body: var(--font-size-0);
+--font-size-h1: var(--font-size-7);
+--font-size-h2: var(--font-size-5);
+--font-size-h3: var(--font-size-3);
+--font-size-h4: var(--font-size-2);
+--font-size-h5: var(--font-size-1);
+--font-size-h6: var(--font-size-0);
+--font-size-p: var(--font-size-body);
+--font-size-ul: var(--font-size-body);
+--font-size-ol: var(--font-size-ul);
+--font-size-blockquote: var(--font-size-body);
 }
 </pre>
-              </code>
+		</code>
 
-					<p>To manage spacing choose from either em or rem spacing variables <code>var(--em-<-2..10>)</code>
-						</code> and <code>var(--rem-<-2..10>)</code> ranging anywhere between <code>-2</code> and
+					<p>Manage spacing use em or rem variables <code>var(-em-&lt;n&gt;)</code>
+						</code> and <code>var(--rem-&lt;n&gt;)</code> where <code>n</code> is anything between
+						<code>-2</code>
+						and
 						<code>10</code>.</p>
 					<p>For example:</p>
 					<code>
@@ -131,7 +150,7 @@
 
 				<p id="guide" onclick="myFunction()" class="Section__Text">(T) Toggle Type Background</p>
 
-				<h2 class="Section__Title" span=3>Type Preview</h2>
+				<h2 class="Section__Title" span=3>Preview</h2>
 
 				<div class="Section__Content" span=5>
 					<span></span>
@@ -142,28 +161,23 @@
 					<h5>Heading 5</h5>
 					<h6>Heading 6</h6>
 
-					<p>A major area of debate involves consequentialism, in which actions are judged by the potential
-						results of the act, such as to maximize happiness, called utilitarianism, and deontology, in
-						which actions are judged by how they adhere to principles, irrespective of negative ends.</p>
-
-					<ul>
-						<li>Lists</li>
-						<li>Films</li>
-						<li>Books</li>
-						<li>Film about books</li>
-						<li>Lists of books on films</li>
-						<li>Film about lists</li>
-					</ul>
-
-					<ol>
-						<li>Biological process, a process of a living organism</li>
-						<li>Cognitive process, such as attention, memory, language use, reasoning, and problem solving
-						</li>
-						<li>Mental process, a function or processes of the mind</li>
-						<li>Neuronal process, also neurite, a projection from the cell body of a neuron</li>
-					</ol>
+					<p>Chuffin' nora where's tha bin any rooad aye by 'eck nobbut a lad. Cack-handed chuffin' nora eeh.
+						Breadcake where there's muck there's brass ah'll gi' thee a thick ear ey up what's that when
+						it's at ooam by 'eck. Dahn t'coil oil be reet bloomin' 'eck. Any rooad. Where there's muck
+						there's brass bloomin' 'eck tha knows tintintin dahn t'coil oil. Tha what tell this summat for
+						nowt is that thine ne'ermind ah'll box thi ears th'art nesh thee gi' o'er. What's that when it's
+						at ooam appens as maybe mardy bum t'foot o' our stairs shu' thi gob. Aye nobbut a lad god's own
+						county. That's champion shu' thi gob will 'e 'eckerslike tintintin a pint 'o mild cack-handed
+						chuffin' nora. Appens as maybe shurrup. Shurrup be reet ah'll gi' thi summat to rooer abaht
+						shurrup.</p>
 				</div>
 			</section>
+		</div>
+
+
+		<div class="Footer fullwidth">
+			<small>Limitless Loop Ltd copyright&copy; 2020</small>
+			<small class="Header_Link"><a href="/">@gavinmcfarland</a></small>
 		</div>
 	</div>
 

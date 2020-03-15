@@ -24,7 +24,11 @@
 		--border-color: var(--white);
 	}
 	a {
-		color: white;
+		color: var(--white);
+	}
+	p>code {
+		color: var(--black);
+		background: var(--white);
 	}
 }
 
@@ -35,6 +39,10 @@
 		--border-color: var(--black);
 	}
 	a {
-		color: black;
+		color: var(--black);
+	}
+	p>code {
+		color: var(--white);
+		background: var(--black);
 	}
 }
