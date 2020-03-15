@@ -1,4 +1,9 @@
 :root {
+	--true: initial;
+	--false: false;
+}
+
+:root {
     /* Base values */
     --font-base: 16px;
     --line-ratio: 1.5;
@@ -8,7 +13,9 @@
     --font-height: 0.75;
 
     /* Spacing ratio */
-    --spacing-ratio: 1;
+	--spacing-ratio: 1;
+	--line-crop: var(--true);
+
 
     /* Font sizes and spacing scales */
 
@@ -85,11 +92,11 @@ blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
     }
 
     &::before {
-        margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
+        margin-bottom: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
     }
 
     &::after {
-        margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
+        margin-top: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
     }
 }
 
@@ -97,11 +104,11 @@ blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
 	blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
 
 		&::before {
-			margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.4em);
+			margin-bottom: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.4em));
 		}
 
 		&::after {
-			margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.6em);
+			margin-top: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.6em));
 		}
 	}
 }

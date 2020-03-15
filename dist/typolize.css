@@ -1,4 +1,9 @@
 :root {
+	--true: initial;
+	--false: false;
+}
+
+:root {
     /* Base values */
     --font-base: 16px;
     --line-ratio: 1.5;
@@ -8,7 +13,9 @@
     --font-height: 0.75;
 
     /* Spacing ratio */
-    --spacing-ratio: 1;
+	--spacing-ratio: 1;
+	--line-crop: var(--true);
+
 
     /* Font sizes and spacing scales */
     --font-size--2: calc(var(--font-base) * (1 / (var(--font-ratio) * var(--font-ratio))));
@@ -134,21 +141,21 @@ blockquote::before,
     }
 
 blockquote::before, p::before, li::before, h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, nav::before, div > a::before, .Button::before, pre::before {
-        margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
+        margin-bottom: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
     }
 
 blockquote::after, p::after, li::after, h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, nav::after, div > a::after, .Button::after, pre::after {
-        margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em);
+        margin-top: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
     }
 
 @-moz-document url-prefix() {
 
 		blockquote::before, p::before, li::before, h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, nav::before, div > a::before, .Button::before, pre::before {
-			margin-bottom: calc((var(--font-height) - var(--line-ratio, 1)) * 0.4em);
+			margin-bottom: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.4em));
 		}
 
 		blockquote::after, p::after, li::after, h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, nav::after, div > a::after, .Button::after, pre::after {
-			margin-top: calc((var(--font-height) - var(--line-ratio, 1)) * 0.6em);
+			margin-top: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.6em));
 		}
 }
 

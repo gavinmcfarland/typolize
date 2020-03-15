@@ -10,9 +10,10 @@ You can customise the base values to determine the overal aesthetics. Type and s
 ```css
 :root {
     --font-base: 16px;
-    --line-ratio: 1.5;
     --font-ratio: 1.333;
+    --line-ratio: 1.5;
     --spacing-ratio: 1;
+    --text-crop: var(--true);
     --font-height: 0.75;
 }
 ```
