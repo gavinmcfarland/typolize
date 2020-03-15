@@ -29,7 +29,7 @@ p>code {
 
 .Section__Title {
 	/* margin-bottom: var(--rem-4); */
-	font-size: var(--type-h3);
+	font-size: var(--font-size-h3);
 }
 
 .Section__Content {

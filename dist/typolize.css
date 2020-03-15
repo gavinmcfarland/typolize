@@ -4,19 +4,24 @@
 }
 
 :root {
-    /* Base values */
-    --font-base: 16px;
-    --line-ratio: 1.5;
-    --font-ratio: 1.333;
-
-    /* Font height */
-    --font-height: 0.75;
-
-    /* Spacing ratio */
+	--font-base: 16px;
+	--font-ratio: 1.333;
+	--line-ratio: 1.5;
 	--spacing-ratio: 1;
-	--line-crop: var(--true);
+	--text-crop: var(--true);
+	--font-height: 0.75;
+}
 
+:root {
+	--tab-size: 2;
+	--letter-spacing-body: -0.03em;
+	--letter-spacing-heading: -0.03em;
+	--font-family-body: Helvetica, sans-serif;
+	--font-family-heading: Helvetica, sans-serif;
+	--font-family-code: "Andale Mono", monospace;
+}
 
+:root {
     /* Font sizes and spacing scales */
     --font-size--2: calc(var(--font-base) * (1 / (var(--font-ratio) * var(--font-ratio))));
     --font-size--1: calc(var(--font-base) * (1 / (var(--font-ratio))));
@@ -57,22 +62,20 @@
 	--rem-8: calc(1rem * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
 	--rem-9: calc(1rem * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
 	--rem-10: calc(1rem * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)))
-
-    /* --em-0: 0; */
 }
 
 :root {
-	--type-body: var(--font-size-0);
-	--type-h1: var(--font-size-7);
-	--type-h2: var(--font-size-5);
-	--type-h3: var(--font-size-3);
-	--type-h4: var(--font-size-2);
-	--type-h5: var(--font-size-1);
-	--type-h6: var(--font-size-0);
-	--type-p: var(--type-body);
-	--type-blockquote: var(--type-body);
-	--type-ul: var(--type-body);
-	--type-ol: var(--type-ul);
+	--font-size-body: var(--font-size-0);
+	--font-size-h1: var(--font-size-7);
+	--font-size-h2: var(--font-size-5);
+	--font-size-h3: var(--font-size-3);
+	--font-size-h4: var(--font-size-2);
+	--font-size-h5: var(--font-size-1);
+	--font-size-h6: var(--font-size-0);
+	--font-size-p: var(--font-size-body);
+	--font-size-ul: var(--font-size-body);
+	--font-size-ol: var(--font-size-ul);
+	--font-size-blockquote: var(--font-size-body);
 }
 
 /* Reset base font */
@@ -141,24 +144,48 @@ blockquote::before,
     }
 
 blockquote::before, p::before, li::before, h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, nav::before, div > a::before, .Button::before, pre::before {
-        margin-bottom: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
+        margin-bottom: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
     }
 
 blockquote::after, p::after, li::after, h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, nav::after, div > a::after, .Button::after, pre::after {
-        margin-top: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
+        margin-top: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
     }
 
 @-moz-document url-prefix() {
 
 		blockquote::before, p::before, li::before, h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, nav::before, div > a::before, .Button::before, pre::before {
-			margin-bottom: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.4em));
+			margin-bottom: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.4em));
 		}
 
 		blockquote::after, p::after, li::after, h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, nav::after, div > a::after, .Button::after, pre::after {
-			margin-top: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.6em));
+			margin-top: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.6em));
 		}
 }
 
 .type-guide blockquote, .type-guide p, .type-guide ul, .type-guide ol, .type-guide h1, .type-guide h2, .type-guide h3, .type-guide h4, .type-guide h5, .type-guide h6, .type-guide nav, .type-guide div > code, .type-guide div > a, .type-guide .Button, .type-guide pre  {
     background: hsla(187, 100%, 76%, 0.12);
+}
+
+/* Font styling */
+
+body {
+	-moz-tab-size: var(--tab-size);
+	  -o-tab-size: var(--tab-size);
+	     tab-size: var(--tab-size);
+	font-family: var(--font-family-body);
+	letter-spacing: var(--letter-spacing-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-family-heading);
+	letter-spacing: var(--letter-spacing-heading);
+}
+
+code {
+	font-family: var(--font-family-code);
 }

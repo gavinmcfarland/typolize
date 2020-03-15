@@ -8,45 +8,45 @@
 }
 
 body {
-	font-size: var(--type-body);
+	font-size: var(--font-size-body);
 }
 
 h1 {
-	font-size: var(--type-h1);
+	font-size: var(--font-size-h1);
 }
 
 h2 {
-	font-size: var(--type-h2);
+	font-size: var(--font-size-h2);
 }
 
 h3 {
-	font-size: var(--type-h3);
+	font-size: var(--font-size-h3);
 }
 
 h4 {
-	font-size: var(--type-h4);
+	font-size: var(--font-size-h4);
 }
 
 h5 {
-	font-size: var(--type-h5);
+	font-size: var(--font-size-h5);
 }
 
 h6 {
-	font-size: var(--type-h6);
+	font-size: var(--font-size-h6);
 }
 
 p {
-	font-size: var(--type-p);
-}
-
-blockquote {
-	font-size: var(--type-blockquote);
+	font-size: var(--font-size-p);
 }
 
 ul {
-	font-size: var(--type-ul);
+	font-size: var(--font-size-ul);
 }
 
 ol {
-	font-size: var(--type-ol);
+	font-size: var(--font-size-ol);
+}
+
+blockquote {
+	font-size: var(--font-size-blockquote);
 }
