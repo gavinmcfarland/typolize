@@ -1,34 +1,34 @@
 {
-  "name": "typolize",
-  "version": "1.0.4",
-  "description": "A style reset for creating perfect modular scale in typography and spacing",
-  "main": "src/index.js",
-  "scripts": {
-    "build": "node src/index.js"
-  },
-  "style": "dist/typolize.css",
-  "author": "Gavin McFarland",
-  "license": "CC0-1.0",
-  "devDependencies": {
-    "autoprefixer": "^9.7.4",
-    "postcss": "^7.0.27",
-    "postcss-for": "^2.1.1",
-    "postcss-import": "^12.0.1",
-    "postcss-logical": "^4.0.2",
-    "postcss-math": "0.0.10",
-    "postcss-nested": "^4.2.1",
-    "postcss-pow": "^1.0.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/limitlessloop/typolize.git"
-  },
-  "keywords": [
-    "css",
-    "postcss",
-    "spacing",
-    "typography",
-    "spacing",
-    "modular scale"
-  ]
+    "name": "typolize",
+    "version": "1.0.5",
+    "description": "A style reset for creating perfect modular scale in typography and spacing",
+    "main": "src/index.js",
+    "scripts": {
+        "build": "node src/index.js"
+    },
+    "style": "dist/typolize.css",
+    "author": "Gavin McFarland",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "autoprefixer": "^9.7.4",
+        "postcss": "^7.0.27",
+        "postcss-for": "^2.1.1",
+        "postcss-import": "^12.0.1",
+        "postcss-logical": "^4.0.2",
+        "postcss-math": "0.0.10",
+        "postcss-nested": "^4.2.1",
+        "postcss-pow": "^1.0.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/limitlessloop/typolize.git"
+    },
+    "keywords": [
+        "css",
+        "postcss",
+        "spacing",
+        "typography",
+        "spacing",
+        "modular scale"
+    ]
 }
