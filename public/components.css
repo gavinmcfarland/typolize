@@ -67,19 +67,33 @@ p>code {
 }
 
 .Header {
-	padding: var(--rem-6) 0;
+	display: flex;
+
+	height: var(--rem-8);
+	/* padding: var(--rem-6) 0; */
 	border-bottom: 1px solid lightgrey;
+	flex-wrap: wrap;
+	flex-direction: column;
+	place-content: center;
+}
+
+.Header > * {
+	/* flex-grow: 1; */
+	flex-basis: 0;
+	/* margin-top: 0; */
+	/* margin-bottom: 0; */
 }
 
 .Header .Header_Name {
 	margin-top: 0;
 	font-size: var(--font-size-5);
 	text-align: center;
-	margin-bottom: var(--rem-3);
+	margin-bottom: var(--em--1);
 }
 
 .Header .Header_Tagline {
 	text-align: center;
+	margin-top: 0;
 }
 
 .Container {
