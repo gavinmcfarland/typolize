@@ -14,7 +14,7 @@
 
     /* Spacing ratio */
 	--spacing-ratio: 1;
-	--line-crop: var(--true);
+	--text-crop: var(--true);
 
 
     /* Font sizes and spacing scales */
@@ -92,11 +92,11 @@ blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
     }
 
     &::before {
-        margin-bottom: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
+        margin-bottom: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
     }
 
     &::after {
-        margin-top: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
+        margin-top: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
     }
 }
 
@@ -104,11 +104,11 @@ blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
 	blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
 
 		&::before {
-			margin-bottom: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.4em));
+			margin-bottom: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.4em));
 		}
 
 		&::after {
-			margin-top: var(--line-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.6em));
+			margin-top: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.6em));
 		}
 	}
 }
