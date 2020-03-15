@@ -13,7 +13,7 @@ h5,
 h6 {
 	font-family: var(--font-family-heading);
 	letter-spacing: var(--letter-spacing-heading);
-	font-weight: 500;
+	font-weight: bold;
 }
 
 code {
