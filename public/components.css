@@ -54,6 +54,7 @@ p>code {
 
 .Button {
 	border: 1px solid;
+	border-color: var(--border-color);
 	padding: var(--rem-1);
 	display: table;
 	margin-left: auto;

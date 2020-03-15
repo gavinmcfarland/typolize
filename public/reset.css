@@ -24,6 +24,7 @@ code {
 }
 
 pre {
+	font-family: inherit;
 	/* Tries to normalize size of font family */
 	font-size: 100%;
 	padding-top: 0.05em;
