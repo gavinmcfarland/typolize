@@ -1,0 +1,163 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Typolize - Normalizes typography and spacing harmoniously.</title>
+
+	<meta name="viewport" content="width=device-width" />
+
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="typolize.css?v=1.0">
+	<link rel="stylesheet" href="default-spacing.css">
+	<!-- <link rel="stylesheet" href="fonts.css"> -->
+	<link rel="stylesheet" href="colors.css">
+	<!-- <link rel="stylesheet" href="text.css"> -->
+	<link rel="stylesheet" href="spacing.css">
+	<link rel="stylesheet" href="layout.css">
+	<link rel="stylesheet" href="props.css">
+	<link rel="stylesheet" href="components.css">
+
+
+	<style>
+		@media (max-width: 900px) and (orientation: portrait) {
+			:root {
+				--spacing-ratio: 0.666;
+			}
+		}
+
+		@media (max-width: 900px) and (orientation: landscape) {
+			:root {
+				--spacing-ratio: 0.5;
+			}
+		}
+
+		@media (min-width: 1500px) {
+			:root {
+				--font-base: 18px;
+			}
+		}
+
+		@media (max-width: 375px) {
+			:root {
+				--font-base: 14px;
+				--spacing-ratio: 0.5;
+			}
+		}
+
+		@media (max-width: 900px) {
+			:root {
+				--font-ratio: 1.2;
+			}
+		}
+	</style>
+
+	<script>
+		document.addEventListener("keypress", function onEvent(event) {
+			if (event.key === "t") {
+				document.getElementById("demo").classList.toggle("type-guide")
+			}
+		});
+
+		function myFunction() {
+			var element = document.getElementById("demo").classList.toggle("type-guide");
+		}
+	</script>
+
+</head>
+
+<body id="demo">
+	<div class="App">
+		<div class="Nav fullwidth">
+			<span class="Logo"><a href="/home">G</a></span>
+
+			<nav>
+				<a href="/">work</a>
+				<a href="/">Contact</a>
+				<a href="/">About</a>
+			</nav>
+		</div>
+		<div class="Container">
+
+			<section class="Section">
+				<h2>Conceptualising a <br />New Rental Service</h2>
+				<div grid>
+					<div span="5" style="margin-bottom: var(--rem-5);">
+						<h4>Overview</h4>
+
+						<p style="font-size: var(--font-size-2);">Renting is a process that many people will experience
+							in their lifetime and it can be a
+							scary,
+							stressful and overwhelming process. Having been a renter myself I was ecstatic when I was
+							asked
+							to collaborate with a small startup to help them conceptualise a new, more intuitive rental
+							service.</p>
+					</div>
+
+					<div span="3" style="margin-bottom: var(--rem-5);">
+						<h6>Role</h6>
+						<p>Investigate existing process, discover user pain points, conduct user interviews,
+							information
+							architecture, create prototypes.</p>
+						<h6>Responsibilities</h6>
+						<p>Investigate existing process, discover user pain points, conduct user interviews,
+							information
+							architecture, create prototypes.</p>
+						<h6>Duration</h6>
+						<p>6 Months</p>
+					</div>
+
+					<img src="/image-placeholder.png" width="543" height="305" />
+
+					<h3 span="3">The Renter, Landlord, Agent Triangle</h3>
+					<div span="5">
+
+						<p>Originally the service was intended as a way to helping landlords and estate agents to
+							spot bad tenants. Through meetings with expert matter holders, customer interviews and
+							surveys we gathered research and insight about Tenants, Landlords and Estate Agents to
+							learn about their habits, goals, motivations, lifestyles and needs. But this quickly
+							pivoted the purpose of the product to reward good tenants and help them through the
+							rental process.</p>
+						<p>Originally the service was intended as a way to helping landlords and estate agents to
+							spot bad tenants. Through meetings with expert matter holders, customer interviews and
+							surveys we gathered research and insight about Tenants, Landlords and Estate Agents to
+							learn about their habits, goals, motivations, lifestyles and needs. But this quickly
+							pivoted the purpose of the product to reward good tenants and help them through the
+							rental process.</p>
+						<h4>Renting in London</h4>
+						<p>I thought it would be useful to get a better understanding of the details and events of the
+							rental process. The flow diagram on the left is an early draft of a typical rental process
+							in London. I’ve written hypothetical dates to get an understanding of the timeframe between
+							events while thinking about the thoughts and feelings a renter might be having during this
+							process.</p>
+						<h4>Rapid Prototyping</h4>
+						<p>It’s important to have a good understanding how the prototype will behave which is why I
+							created this flow diagram of the Agent flow which shows the order and interactions of each
+							screens. The act of creating this diagram was more important the actual output as it allows
+							me to challenge my thoughts about what information should be asked for and when. I did the
+							same for the Tenant flow.</p>
+						<h4>Finished Screens</h4>
+						<p>At such a high level of thinking, the solution for the service went through so many possible
+							outcomes. But without a way to visualise the service, it was difficult to quantify it’s
+							value. Creating a prototype helped demonstrate the problem they were solving for and how it
+							could be achieved. We used this prototype to present to, users, stakeholders and potential
+							investors.</p>
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+
+		<div class="Footer fullwidth">
+			<small>Copyright 2020 &copy; Limitless Loop</small>
+			<small class="Header_Link"><a href="https://twitter.com/gavinmcfarland">@gavinmcfarland</a></small>
+		</div>
+	</div>
+
+</body>
+
+</html>

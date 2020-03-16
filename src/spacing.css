@@ -1,0 +1,64 @@
+/* Remove margin from pre tag */
+pre {
+	margin: 0;
+}
+
+hr {
+	margin-top: var(--rem-5) !important; /* Temporary */
+	margin-bottom: var(--rem-5);
+}
+
+h1, h2, h3, h4, h5 {
+	margin-top: var(--em-2);
+	margin-bottom: var(--em-2);
+}
+
+h6 {
+	margin-top: var(--em-3);
+}
+
+code {
+	margin-bottom: var(--em-2);
+}
+
+img {
+	margin-bottom: var(--rem-5);
+}
+
+
+/* Gap prop */
+
+[gap] {
+	--gap: var(--rem-1);
+}
+
+[gap]>*>* {
+	--gap: initial;
+}
+
+[gap]>*+* {
+	margin-top: var(--gap);
+}
+
+[gap="1"] {
+	--gap: var(--rem-1);
+}
+
+[gap="2"] {
+	--gap: var(--rem-2);
+}
+
+[gap="3"] {
+	--gap: var(--rem-3);
+}
+
+[gap="4"] {
+	--gap: var(--rem-4);
+}
+
+[gap="5"] {
+	--gap: var(--rem-5);
+}
+
+
+

@@ -1,7 +1,8 @@
 /* Remove default border from hr */
 
 * {
-    margin: unset;
+	margin: unset;
+	padding: unset;
 	box-sizing: border-box;
 }
 
@@ -33,4 +34,14 @@ pre {
 
 :not(p)>code {
 	display: block;
+}
+
+
+a {
+	display: inline;
+}
+
+
+img {
+	height: auto;
 }

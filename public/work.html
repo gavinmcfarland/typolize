@@ -1,0 +1,165 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Typolize - Normalizes typography and spacing harmoniously.</title>
+
+	<meta name="viewport" content="width=device-width" />
+
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="typolize.css?v=1.0">
+	<link rel="stylesheet" href="default-spacing.css">
+	<!-- <link rel="stylesheet" href="fonts.css"> -->
+	<link rel="stylesheet" href="colors.css">
+	<!-- <link rel="stylesheet" href="text.css"> -->
+	<link rel="stylesheet" href="spacing.css">
+	<link rel="stylesheet" href="layout.css">
+	<link rel="stylesheet" href="props.css">
+	<link rel="stylesheet" href="components.css">
+
+
+	<style>
+		@media (max-width: 900px) and (orientation: portrait) {
+			:root {
+				--spacing-ratio: 0.666;
+			}
+		}
+
+		@media (max-width: 900px) and (orientation: landscape) {
+			:root {
+				--spacing-ratio: 0.5;
+			}
+		}
+
+		@media (min-width: 1500px) {
+			:root {
+				--font-base: 18px;
+			}
+		}
+
+		@media (max-width: 375px) {
+			:root {
+				--font-base: 14px;
+				--spacing-ratio: 0.5;
+			}
+		}
+
+		@media (max-width: 900px) {
+			:root {
+				--font-ratio: 1.2;
+			}
+		}
+	</style>
+
+	<script>
+		document.addEventListener("keypress", function onEvent(event) {
+			if (event.key === "t") {
+				document.getElementById("demo").classList.toggle("type-guide")
+			}
+		});
+
+		function myFunction() {
+			var element = document.getElementById("demo").classList.toggle("type-guide");
+		}
+	</script>
+
+</head>
+
+<body id="demo">
+	<div class="App">
+		<div class="Nav fullwidth">
+			<span class="Logo"><a href="/home">G</a></span>
+
+			<nav>
+				<a href="/work">Work</a>
+				<a href="/">Contact</a>
+				<a href="/">About</a>
+			</nav>
+		</div>
+		<div class="Container">
+
+			<section class="Section">
+				<h2>Work</h2>
+
+				<div>
+					<div gap="5">
+						<div class="Card" grid>
+							<img src="/image-placeholder.png" class="Card__Image" span="4" width="543" height="305" />
+							<div class="Card__Content" span="4">
+								<h6><a href="/case-study">10 Reasons Not to Break the Ice</a></h6>
+								<p>As part of an audit to look for opportunities to improve a large white label dating
+									company,
+									one
+									thing I noticed was the number of steps required for a user to send an Ice Breaker.
+									Ice
+									Breakers
+									are used to encourage members to message each other. I decided to create a site map
+									of
+									the
+									existing functionality and found there were 10 opportunities where a member could
+									decide
+									to
+									give
+									up.</p>
+								<p>
+									<a href="/case-study">Read More</a>
+								</p>
+							</div>
+
+						</div>
+
+						<div class="Card" grid>
+							<img src="/image-placeholder.png" class="Card__Image" span="4" width="543" height="305" />
+							<div class="Card__Content" span="4">
+								<h6><a href="/case-study">Conceptualising a New Rental Service</a></h6>
+								<p>Renting is a process that many people will experience in their lifetime and it can be
+									a
+									scary, stressful and overwhelming process. Having been a renter myself I was
+									ecstatic
+									when I
+									was asked to collaborate with a small startup to help them conceptualise a new, more
+									intuitive rental service.</p>
+								<p>
+									<a href="/">Read More</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="Card" grid>
+							<img src="/image-placeholder.png" class="Card__Image" span="4" width="543" height="305" />
+							<div class="Card__Content" span="4">
+								<h6><a href="/case-study">Getting From A to B</a></h6>
+								<p>Commuter is an iPhone app that lets you plan your journey using public transport
+									without
+									sharing any user data with third parties. CYB wanted me to help them demonstrate how
+									their existing iPhone app might work on Android so they may approach interested
+									investors.</p>
+								<p>
+									<a href="/">Read More</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+			</section>
+		</div>
+
+
+		<div class="Footer fullwidth">
+			<small>Copyright 2020 &copy; Limitless Loop</small>
+			<small class="Header_Link"><a href="https://twitter.com/gavinmcfarland">@gavinmcfarland</a></small>
+		</div>
+	</div>
+
+</body>
+
+</html>

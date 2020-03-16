@@ -1,5 +1,18 @@
 /* Elements */
 
+a {
+	text-decoration: none;
+	border-bottom: 1px solid;
+	/* background-image: linear-gradient(black, black);
+	background-size: 100% 1px;
+	background-position: left bottom;
+	background-repeat: no-repeat; */
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	border-bottom: none;
+}
+
 body {
 	padding-left: var(--rem-3);
 	padding-right: var(--rem-3);
@@ -7,7 +20,7 @@ body {
 }
 
 hr {
-	border-bottom: 1px solid lightgrey;
+	border-bottom: 1px solid;
 }
 
 code {
@@ -45,23 +58,17 @@ p>code {
 
 /* Components */
 
-.Button {
-	margin-top: var(--rem-2);
-}
-
 .Section {
 	/* --spacing: var(--spacing-4); */
 }
 
 .Button {
+	display: inline-block;
 	border: 1px solid;
 	border-color: var(--border-color);
 	padding: var(--rem-1);
-	display: table;
-	margin-left: auto;
-	margin-right: auto;
 	text-decoration: none;
-	/* border-radius: 9999px; */
+	background: none;
 }
 
 .Button:hover {
@@ -73,7 +80,7 @@ p>code {
 
 	height: var(--rem-9);
 	/* padding: var(--rem-6) 0; */
-	border-bottom: 1px solid lightgrey;
+	border-bottom: 1px solid;
 	flex-wrap: wrap;
 	flex-direction: column;
 	place-content: center;
@@ -94,9 +101,51 @@ p>code {
 	margin-right: -0.15em
 }
 
+.Header .Button {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.Header .Button {
+	margin-top: var(--rem-2);
+}
+
 .Header .Header_Tagline {
 	text-align: center;
 	margin-top: 0;
+}
+
+
+.Nav {
+	padding-top: var(--rem-1);
+	padding-bottom: var(--rem-1);
+	border-bottom: 1px solid;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.Logo {
+	font-weight: bold;
+}
+
+.Logo>a {
+	text-decoration: none;
+	font-size: var(--font-size-1);
+}
+
+.Nav nav {
+	margin-top: 0;
+}
+
+.Nav nav>*+* {
+	margin-left: var(--rem-1);
+	flex-shrink: 0;
+}
+
+.Nav nav a {
+	border-bottom: none;
 }
 
 .Container {
@@ -115,6 +164,7 @@ p>code {
 .Footer {
 	display: flex;
 	margin-bottom: var(--rem-3);
+	margin-top: var(--rem-6);
 
 }
 
@@ -128,4 +178,29 @@ p>code {
 
 .Header_Link {
 	margin-left: auto;
+}
+
+.Card__Content {
+	/* margin-top: var(--rem-3); */
+}
+
+.Card__Image {
+	margin-bottom: var(--rem-3);
+}
+
+
+.List>*+* {
+	margin-top: var(--rem-5);
+}
+
+.text-crop-none {
+	display: block;
+}
+
+.text-crop-none::before {
+	display: none;
+}
+
+.text-crop-none::after {
+	display: none;
 }
