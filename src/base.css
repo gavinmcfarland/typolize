@@ -123,21 +123,6 @@ blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
     background: hsla(187, 100%, 76%, 0.12);
 }
 
-
-
-
-
-
-/* stuff */
-/* Type sizing */
-
-@media (max-width: 600px) {
-	:root {
-		--font-ratio: 1.2;
-	}
-
-}
-
 body {
 	font-size: var(--font-size-body);
 }
