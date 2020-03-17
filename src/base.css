@@ -87,7 +87,7 @@ blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, pre {
     display: flow-root;
 }
 
-blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, div > a, .Button, pre {
+blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, .Button, pre {
 
     &::before,
     &::after {
