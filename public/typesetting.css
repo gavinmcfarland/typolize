@@ -37,7 +37,7 @@
 /* Leading Trimming */
 
 h1, h2, h3, h4, blockquote, p {
-	--leading-trim: var(--true);
+	--leading-trim: '';
 }
 
 /* Text Spacing */

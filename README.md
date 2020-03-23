@@ -54,13 +54,13 @@ h1 {
 
 ## Leading Trim
 
-Apply leading trim to any element using `--leading-trim: var(--true)`, `--leading-trim-over: var(--true)` or `--leading-trim-under: var(--true)`.
+Apply leading trim to any element using `--leading-trim: ''`, `--leading-trim-over: ''` or `--leading-trim-under: ''`.
 
 By class
 
 ```css
 .button {
-    --leading-trim: var(--true);
+    --leading-trim: '';
 }
 ```
 
@@ -68,15 +68,15 @@ Or selectors
 
 ```css
 h1, h2, h3, h4, h5, h6, p, li {
-    --leading-trim: var(--true);
+    --leading-trim: '';
 }
 ```
 
-Adjust to different fonts by setting `--font-height`.
+Adjust to different fonts by setting `--cap-height`.
 
 ```css
 :root {
-    --font-height: 0.75;
+    --cap-height: 0.75;
 }
 ```
 
