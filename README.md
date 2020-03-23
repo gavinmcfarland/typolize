@@ -85,6 +85,14 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 ```
 
+Adjust to different fonts by setting `--font-height`.
+
+```css
+:root {
+    --font-height: 0.75;
+}
+```
+
 See the [demo](https://typolize.now.sh/) for examples of it being used.
 
 
