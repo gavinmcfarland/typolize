@@ -10,15 +10,10 @@
 	<meta name="viewport" content="width=device-width" />
 
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
-	<link rel="stylesheet" href="reset.css">
+	<!-- <link rel="stylesheet" href="reset.css"> -->
 	<link rel="stylesheet" href="typolize.css?v=1.0">
-	<link rel="stylesheet" href="default-spacing.css">
-	<!-- <link rel="stylesheet" href="fonts.css"> -->
 	<link rel="stylesheet" href="colors.css">
-	<!-- <link rel="stylesheet" href="text.css"> -->
-	<link rel="stylesheet" href="spacing.css">
 	<link rel="stylesheet" href="layout.css">
-	<link rel="stylesheet" href="props.css">
 	<link rel="stylesheet" href="components.css">
 
 
@@ -83,19 +78,14 @@
 				<h2 class="Section__Title" span="3">Getting Started</h2>
 				<div class="Section__Content" span="5">
 					<p>Download from a CDN</p>
-					<code>
-                <pre>https://unpkg.com/typolize/dist/typolize.css</pre>
-              </code>
+
+					<pre><code>https://unpkg.com/typolize/dist/typolize.css</code></pre>
 
 					<p>Or use in your node project using the following</p>
-					<code>
-                <pre>npm install typolize</pre>
-              </code>
+					<pre><code>npm install typolize</code></pre>
 
 					<p>And import into your stysheets</p>
-					<code>
-                <pre>@import 'typolize'</pre>
-              </code>
+					<pre><code>@import 'typolize'</code></pre>
 
 				</div>
 
@@ -104,19 +94,16 @@
 				<h2 class="Section__Title" span=3>How to Use</h2>
 				<div class="Section__Content" span=5>
 					<p>Customise the following variables to change modular scale of the type and spacing.</p>
-					<code>
-                <pre>:root {
+					<pre><code>:root {
   --font-base: 16px;
   --line-ratio: 1.5;
   --font-ratio: 1.333;
   --spacing-ratio: 1;
-}</pre>
-              </code>
+}</code></pre>
 
 					<p>Configure the default typesetting by setting the font sizes</p>
 
-					<code>
-		  <pre>:root {
+					<pre><code>:root {
 --font-size-body: var(--font-size-0);
 --font-size-h1: var(--font-size-7);
 --font-size-h2: var(--font-size-5);
@@ -128,9 +115,7 @@
 --font-size-ul: var(--font-size-body);
 --font-size-ol: var(--font-size-ul);
 --font-size-blockquote: var(--font-size-body);
-}
-</pre>
-		</code>
+}</code></pre>
 
 					<p>Manage spacing use em or rem variables <code>var(-em-&lt;n&gt;)</code>
 						</code> and <code>var(--rem-&lt;n&gt;)</code> where <code>n</code> is anything between
@@ -138,12 +123,10 @@
 						and
 						<code>10</code>.</p>
 					<p>For example:</p>
-					<code>
-                <pre>code {
+					<pre><code>code {
 	margin-top: var(--em-1);
 	margin-bottom: var(--em-2);
-}</pre>
-              </code>
+}</code></pre>
 				</div>
 
 				<hr class="fullwidth" />

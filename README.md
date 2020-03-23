@@ -13,8 +13,6 @@ You can customise the base values to determine the overal aesthetics. Type and s
     --font-ratio: 1.333;
     --line-ratio: 1.5;
     --spacing-ratio: 1;
-    --text-crop: var(--true);
-    --font-height: 0.75;
 }
 ```
 
@@ -52,18 +50,38 @@ Customise spacing of type elements like the following.
 
 ```css
 code {
-    margin-top: var(--em-1);
+    margin-top: var(--em-4);
     margin-bottom: var(--em-2);
 }
 
 /* Or */
 
-* + code {
-    margin-top: var(--em-1);
+* + h1 {
+    margin-top: var(--em-4);
 }
 
-code + * {
+h1 + * {
     margin-bottom: var(--em-2);
+}
+```
+
+## Leading Trim
+
+Apply leading trim to any element using `--leading-trim: var(--true)`, `--leading-trim-over: var(--true)` or `--leading-trim-under: var(--true)`.
+
+By class
+
+```css
+.button {
+    --leading-trim: var(--true);
+}
+```
+
+Or selectors
+
+```css
+h1, h2, h3, h4, h5, h6, p, li {
+    --leading-trim: var(--true);
 }
 ```
 

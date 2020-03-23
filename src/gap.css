@@ -1,27 +1,3 @@
-/* Remove margin from pre tag */
-pre {
-	margin: 0;
-}
-
-hr {
-	margin-top: var(--rem-5) !important; /* Temporary */
-	margin-bottom: var(--rem-5);
-}
-
-h1, h2, h3, h4, h5 {
-	margin-top: var(--em-2);
-	margin-bottom: var(--em-2);
-}
-
-h6 {
-	margin-top: var(--em-3);
-}
-
-code {
-	margin-bottom: var(--em-2);
-}
-
-
 /* Gap prop */
 
 [gap] {

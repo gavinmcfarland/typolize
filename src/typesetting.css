@@ -1,0 +1,70 @@
+/* Variables */
+
+:root {
+	--font-base: 16px;
+	--font-ratio: 1.333;
+	--line-ratio: 1.5;
+	--spacing-ratio: 1;
+	--font-height: 0.75;
+}
+
+:root {
+	--tab-size: 2;
+	--letter-spacing-body: -0.03em;
+	--letter-spacing-heading: -0.03em;
+	--font-family-body: Helvetica, sans-serif;
+	--font-family-heading: Helvetica, sans-serif;
+	--font-family-code: "Andale Mono", monospace;
+	--font-weight-heading: bold;
+}
+
+:root {
+	--font-size-body: var(--font-size-0);
+	--font-size-h1: var(--font-size-7);
+	--font-size-h2: var(--font-size-5);
+	--font-size-h3: var(--font-size-4);
+	--font-size-h4: var(--font-size-2);
+	--font-size-h5: var(--font-size-1);
+	--font-size-h6: var(--font-size-0);
+	--font-size-blockquote: var(--font-size-body);
+}
+
+:root {
+	--border-color-code: grey;
+}
+
+
+/* Leading Trimming */
+
+h1, h2, h3, h4, blockquote {
+	--leading-trim: var(--true);
+}
+
+/* Text Spacing */
+
+*+* {
+	margin-top: var(--em-1);
+}
+
+html, body, section, div, a {
+	margin-top: unset;
+	margin-bottom: unset;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: var(--em-1);
+}
+
+hr {
+	margin-top: var(--rem-5);
+	margin-bottom: var(--rem-5);
+}
+
+h1, h2, h3, h4, h5 {
+	margin-top: var(--em-2);
+	margin-bottom: var(--em-2);
+}
+
+h6 {
+	margin-top: var(--em-3);
+}

@@ -1,0 +1,41 @@
+/* leading-trim.css */
+
+:root {
+	--true: '';
+	--false: unset;
+
+	/* Customize these options */
+	--leading-trim-over-ammount: 0.5em;
+	--leading-trim-under-ammount: 0.5em;
+	--font-height: 0.75;
+	--line-height: var(--line-ratio);
+}
+
+::before, ::after {
+	display: block;
+	height: 0;
+	width: 0;
+}
+
+::before {
+	content: var(--leading-trim, var(--leading-trim-over, var(--false)));
+	margin-bottom: calc((var(--font-height) - var(--line-height, 1)) * var(--leading-trim-over-ammount));
+}
+
+::after {
+	content: var(--leading-trim, var(--leading-trim-under, var(--false)));
+	margin-top: calc((var(--font-height) - var(--line-height, 1)) * var(--leading-trim-under-ammount));
+}
+
+*>* {
+	--leading-trim: var(--false);
+	--leading-trim-over: var(--false);
+	--leading-trim-under: var(--false);
+}
+
+/* @-moz-document url-prefix() {} */
+
+.type-guide blockquote, .type-guide p, .type-guide ul, .type-guide ol, .type-guide h1, .type-guide h2, .type-guide h3, .type-guide h4, .type-guide h5, .type-guide h6, .type-guide nav, .type-guide div > code, .type-guide div > a, .type-guide .Button, .type-guide pre  {
+	display: flow-root;
+	background-color: hsla(187, 100%, 76%, 0.12);
+}

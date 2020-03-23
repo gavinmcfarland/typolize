@@ -1,0 +1,77 @@
+/* Font sizes and spacing scales */
+
+:root {
+    @for $i from -2 to 10 {
+    --font-size-$(i): calc(1rem * pow(var(--font-ratio), $(i)));
+	}
+	@for $i from -2 to 10 {
+	--font-size-em-$(i): calc(1em * pow(var(--font-ratio), $(i)));
+	}
+    @for $i from -2 to 10 {
+    --em-$(i): calc(1em * pow(var(--line-ratio), $(i)));
+	}
+	@for $i from -2 to 10 {
+	--rem-$(i): calc(1rem * var(--spacing-ratio) * pow(var(--line-ratio), $(i)));
+	}
+}
+
+html {
+    font-size: var(--font-base);
+}
+
+body {
+	font-size: var(--font-size-body);
+	line-height: var(--line-ratio);
+	tab-size: var(--tab-size);
+	font-family: var(--font-family-body);
+	letter-spacing: var(--letter-spacing-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-family-heading);
+	letter-spacing: var(--letter-spacing-heading);
+	font-weight: var(--font-weight-heading);
+}
+
+code {
+	font-family: var(--font-family-code);
+}
+
+h1 {
+	font-size: var(--font-size-h1);
+}
+
+h2 {
+	font-size: var(--font-size-h2);
+}
+
+h3 {
+	font-size: var(--font-size-h3);
+}
+
+h4 {
+	font-size: var(--font-size-h4);
+}
+
+h5 {
+	font-size: var(--font-size-h5);
+}
+
+h6 {
+	font-size: var(--font-size-h6);
+}
+
+blockquote {
+	font-size: var(--font-size-blockquote);
+}
+
+small {
+	font-size: var(--font-size-small);
+}
+
+

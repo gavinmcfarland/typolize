@@ -1,32 +1,116 @@
-:root {
-	--true: initial;
-	--false: false;
+* {
+	margin: unset;
+	padding: unset;
+	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+}
+
+hr {
+	border: none;
+	margin-bottom: unset;
+}
+
+a {
+	display: inline;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+code {
+	vertical-align: inherit; /* Because vertical baseline needs to match paragrah */
+	font-size: 0.9em; /* Because monospace usually appears bigger than non monospaced fonts */
+}
+
+div>code {
+	display: block; /* When code is used as a block? */
+}
+
+pre>code {
+	display: block;
+}
+
+iframe {
+	display: block;
+}
+
+* {
+	margin: unset;
+	padding: unset;
+	box-sizing: border-box;
+}
+
+hr {
+	border: none;
+	margin-bottom: unset;
+}
+
+pre {
+	font-family: inherit;
+}
+
+a {
+	display: inline;
+}
+
+img {
+	height: auto;
+}
+
+/* leading-trim.css */
+
 :root {
-	--font-base: 16px;
-	--font-ratio: 1.333;
-	--line-ratio: 1.5;
-	--spacing-ratio: 1;
-	--text-crop: var(--true);
+	--true: '';
+	--false: unset;
+
+	/* Customize these options */
+	--leading-trim-over-ammount: 0.5em;
+	--leading-trim-under-ammount: 0.5em;
 	--font-height: 0.75;
+	--line-height: var(--line-ratio);
 }
 
-:root {
-	--tab-size: 2;
-	--letter-spacing-body: -0.03em;
-	--letter-spacing-heading: -0.03em;
-	--font-family-body: Helvetica, sans-serif;
-	--font-family-heading: Helvetica, sans-serif;
-	--font-family-code: "Andale Mono", monospace;
+::before, ::after {
+	display: block;
+	height: 0;
+	width: 0;
 }
 
-:root {
-	--border-color-code: grey;
+::before {
+	content: var(--leading-trim, var(--leading-trim-over, var(--false)));
+	margin-bottom: calc((var(--font-height) - var(--line-height, 1)) * var(--leading-trim-over-ammount));
 }
 
+::after {
+	content: var(--leading-trim, var(--leading-trim-under, var(--false)));
+	margin-top: calc((var(--font-height) - var(--line-height, 1)) * var(--leading-trim-under-ammount));
+}
+
+*>* {
+	--leading-trim: var(--false);
+	--leading-trim-over: var(--false);
+	--leading-trim-under: var(--false);
+}
+
+/* @-moz-document url-prefix() {} */
+
+.type-guide blockquote, .type-guide p, .type-guide ul, .type-guide ol, .type-guide h1, .type-guide h2, .type-guide h3, .type-guide h4, .type-guide h5, .type-guide h6, .type-guide nav, .type-guide div > code, .type-guide div > a, .type-guide .Button, .type-guide pre  {
+	display: flow-root;
+	background-color: hsla(187, 100%, 76%, 0.12);
+}
+
+/* Font sizes and spacing scales */
+
 :root {
-    /* Font sizes and spacing scales */
     --font-size--2: calc(1rem * (1 / (var(--font-ratio) * var(--font-ratio))));
     --font-size--1: calc(1rem * (1 / (var(--font-ratio))));
     --font-size-0: calc(1rem * 1);
@@ -40,6 +124,19 @@
     --font-size-8: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
     --font-size-9: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
     --font-size-10: calc(1rem * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+	--font-size-em--2: calc(1em * (1 / (var(--font-ratio) * var(--font-ratio))));
+	--font-size-em--1: calc(1em * (1 / (var(--font-ratio))));
+	--font-size-em-0: calc(1em * 1);
+	--font-size-em-1: calc(1em * (var(--font-ratio)));
+	--font-size-em-2: calc(1em * (var(--font-ratio) * var(--font-ratio)));
+	--font-size-em-3: calc(1em * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+	--font-size-em-4: calc(1em * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+	--font-size-em-5: calc(1em * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+	--font-size-em-6: calc(1em * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+	--font-size-em-7: calc(1em * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+	--font-size-em-8: calc(1em * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+	--font-size-em-9: calc(1em * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
+	--font-size-em-10: calc(1em * (var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)));
     --em--2: calc(1em * (1 / (var(--line-ratio) * var(--line-ratio))));
     --em--1: calc(1em * (1 / (var(--line-ratio))));
     --em-0: calc(1em * 1);
@@ -68,121 +165,33 @@
 	--rem-10: calc(1rem * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)))
 }
 
-:root {
-	--font-size-body: var(--font-size-0);
-	--font-size-h1: var(--font-size-7);
-	--font-size-h2: var(--font-size-5);
-	--font-size-h3: var(--font-size-4);
-	--font-size-h4: var(--font-size-2);
-	--font-size-h5: var(--font-size-1);
-	--font-size-h6: var(--font-size-0);
-	--font-size-p: var(--font-size-body);
-	--font-size-ul: var(--font-size-body);
-	--font-size-ol: var(--font-size-ul);
-	--font-size-blockquote: var(--font-size-body);
-}
-
-/* Reset base font */
-
 html {
     font-size: var(--font-base);
 }
 
-/* Apply line height to all elements */
-
-body {
-    line-height: var(--line-ratio);
-}
-
-/* Element spacing */
-
-*+* {
-	margin-top: var(--em-1);
-}
-
-h1, h2, h3, h4, h5, h5, h6 {
-	margin-bottom: var(--em-1);
-}
-
-html, body, section, div, a {
-	margin-top: unset;
-	margin-bottom: unset;
-}
-
-/* Needs to more specific than most resets */
-
-blockquote, p, li, h1, h2, h3, h4, h5, h6, nav, pre {
-    display: flow-root;
-}
-
-blockquote::before,
-    blockquote::after,
-    p::before,
-    p::after,
-    li::before,
-    li::after,
-    h1::before,
-    h1::after,
-    h2::before,
-    h2::after,
-    h3::before,
-    h3::after,
-    h4::before,
-    h4::after,
-    h5::before,
-    h5::after,
-    h6::before,
-    h6::after,
-    nav::before,
-    nav::after,
-    div > a::before,
-    div > a::after,
-    .Button::before,
-    .Button::after,
-    pre::before,
-    pre::after {
-        content: '';
-        display: block;
-        height: 0;
-        width: 0;
-    }
-
-blockquote::before, p::before, li::before, h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, nav::before, div > a::before, .Button::before, pre::before {
-        margin-bottom: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
-    }
-
-blockquote::after, p::after, li::after, h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, nav::after, div > a::after, .Button::after, pre::after {
-        margin-top: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.5em));
-    }
-
-@-moz-document url-prefix() {
-
-		blockquote::before, p::before, li::before, h1::before, h2::before, h3::before, h4::before, h5::before, h6::before, nav::before, div > a::before, .Button::before, pre::before {
-			margin-bottom: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.4em));
-		}
-
-		blockquote::after, p::after, li::after, h1::after, h2::after, h3::after, h4::after, h5::after, h6::after, nav::after, div > a::after, .Button::after, pre::after {
-			margin-top: var(--text-crop, calc((var(--font-height) - var(--line-ratio, 1)) * 0.6em));
-		}
-}
-
-.type-guide blockquote, .type-guide p, .type-guide ul, .type-guide ol, .type-guide h1, .type-guide h2, .type-guide h3, .type-guide h4, .type-guide h5, .type-guide h6, .type-guide nav, .type-guide div > code, .type-guide div > a, .type-guide .Button, .type-guide pre  {
-    background: hsla(187, 100%, 76%, 0.12);
-}
-
-/* stuff */
-
-/* Type sizing */
-
-@media (max-width: 600px) {
-	:root {
-		--font-ratio: 1.2;
-	}
-
-}
-
 body {
 	font-size: var(--font-size-body);
+	line-height: var(--line-ratio);
+	-moz-tab-size: var(--tab-size);
+	  -o-tab-size: var(--tab-size);
+	     tab-size: var(--tab-size);
+	font-family: var(--font-family-body);
+	letter-spacing: var(--letter-spacing-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-family-heading);
+	letter-spacing: var(--letter-spacing-heading);
+	font-weight: var(--font-weight-heading);
+}
+
+code {
+	font-family: var(--font-family-code);
 }
 
 h1 {
@@ -209,52 +218,12 @@ h6 {
 	font-size: var(--font-size-h6);
 }
 
-p {
-	font-size: var(--font-size-p);
-}
-
-ul {
-	font-size: var(--font-size-ul);
-}
-
-ol {
-	font-size: var(--font-size-ol);
-}
-
 blockquote {
 	font-size: var(--font-size-blockquote);
 }
 
 small {
-	font-size: var(--font-size--1);
-}
-
-/* Remove margin from pre tag */
-
-pre {
-	margin: 0;
-}
-
-hr {
-	margin-top: var(--rem-5) !important; /* Temporary */
-	margin-bottom: var(--rem-5);
-}
-
-h1, h2, h3, h4, h5 {
-	margin-top: var(--em-2);
-	margin-bottom: var(--em-2);
-}
-
-h6 {
-	margin-top: var(--em-3);
-}
-
-code {
-	margin-bottom: var(--em-2);
-}
-
-img {
-	margin-bottom: var(--rem-5);
+	font-size: var(--font-size-small);
 }
 
 /* Gap prop */
@@ -291,27 +260,73 @@ img {
 	--gap: var(--rem-5);
 }
 
-/* Font styling */
+/* Variables */
 
-body {
-	-moz-tab-size: var(--tab-size);
-	  -o-tab-size: var(--tab-size);
-	     tab-size: var(--tab-size);
-	font-family: var(--font-family-body);
-	letter-spacing: var(--letter-spacing-body);
+:root {
+	--font-base: 16px;
+	--font-ratio: 1.333;
+	--line-ratio: 1.5;
+	--spacing-ratio: 1;
+	--font-height: 0.75;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+:root {
+	--tab-size: 2;
+	--letter-spacing-body: -0.03em;
+	--letter-spacing-heading: -0.03em;
+	--font-family-body: Helvetica, sans-serif;
+	--font-family-heading: Helvetica, sans-serif;
+	--font-family-code: "Andale Mono", monospace;
+	--font-weight-heading: bold;
+}
+
+:root {
+	--font-size-body: var(--font-size-0);
+	--font-size-h1: var(--font-size-7);
+	--font-size-h2: var(--font-size-5);
+	--font-size-h3: var(--font-size-4);
+	--font-size-h4: var(--font-size-2);
+	--font-size-h5: var(--font-size-1);
+	--font-size-h6: var(--font-size-0);
+	--font-size-blockquote: var(--font-size-body);
+}
+
+:root {
+	--border-color-code: grey;
+}
+
+/* Leading Trimming */
+
+h1, h2, h3, h4, blockquote {
+	--leading-trim: var(--true);
+}
+
+/* Text Spacing */
+
+*+* {
+	margin-top: var(--em-1);
+}
+
+html, body, section, div, a {
+	margin-top: unset;
+	margin-bottom: unset;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: var(--em-1);
+}
+
+hr {
+	margin-top: var(--rem-5);
+	margin-bottom: var(--rem-5);
+}
+
+h1, h2, h3, h4, h5 {
+	margin-top: var(--em-2);
+	margin-bottom: var(--em-2);
+}
+
 h6 {
-	font-family: var(--font-family-heading);
-	letter-spacing: var(--letter-spacing-heading);
-	font-weight: bold;
+	margin-top: var(--em-3);
 }
 
-code {
-	font-family: var(--font-family-code);
-}
