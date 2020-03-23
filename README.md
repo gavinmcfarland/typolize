@@ -19,7 +19,7 @@ You can customise the base values to determine the overal aesthetics. Type and s
 Changing the default `font-ratio` for example will create either a larger or smaller scale of sizes in fonts.
 
 
-## Typesetting
+## Font Sizing
 
 Customise the scales and contrast between different type elements by changing the default size.
 
@@ -32,10 +32,7 @@ Customise the scales and contrast between different type elements by changing th
     --font-size-h4: var(--font-size-2);
     --font-size-h5: var(--font-size-1);
     --font-size-h6: var(--font-size-0);
-    --font-size-p: var(--font-size-body);
-    --font-size-ul: var(--font-size-body);
-    --font-size-ol: var(--font-size-ul);
-    --font-size-blockquote: var(--font-size-body);
+    --font-size-small: var(--font-size--1);
 }
 ```
 Alternatively style elements uniquly using a font size variable `var(--font-size-<-2..10>)` ranging anywhere between `-2` and `10`. 
@@ -46,21 +43,11 @@ To manage spacing choose from either em or rem spacing variables `var(--em-<-2..
 
 By deafult all type elements have a top and bottom margin of `var(--em-1)`. Containers like `divs` and `sections` do not not have margins.
 
-Customise spacing of type elements like the following.
+Customise spacing of elements
 
 ```css
-code {
+h1 {
     margin-top: var(--em-4);
-    margin-bottom: var(--em-2);
-}
-
-/* Or */
-
-* + h1 {
-    margin-top: var(--em-4);
-}
-
-h1 + * {
     margin-bottom: var(--em-2);
 }
 ```
@@ -98,23 +85,24 @@ See the [demo](https://typolize.now.sh/) for examples of it being used.
 
 ## Install
 
-Download directly from a CDN using unpkg
+1. Download directly from a CDN using unpkg
 
-```
-https://unpkg.com/typolize/dist/typolize.css
-```
+    ```
+    https://unpkg.com/typolize/dist/typolize.css
+    ```
+    
+    Or use in your node project using the following
 
-Or use in your node project using the following
+    ```bash
+    npm install typolize
+    ```
+    
+    Import into your stylesheet
 
-```bash
-npm install typolize
-```
-
-And in your stylesheets using PostCSS import
-
-```css
-@import 'typolize'
-```
+    ```css
+    @import 'typolize'
+    ```
+2. Customize using the variables explained above
 
 ## Development
 

@@ -4,5 +4,12 @@
 @import 'core';
 @import 'gap';
 
-@import 'typesetting';
+/* Defaults */
 
+:root {
+	--font-base: 1rem;
+	--font-ratio: 1;
+	--line-ratio: 1;
+	--spacing-ratio: 1;
+	--font-height: 0.75;
+}
