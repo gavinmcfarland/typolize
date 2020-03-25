@@ -82,7 +82,7 @@ Adjust to different fonts by setting the `--cap-height` which is a percentage of
 }
 ```
 
-See the [demo](https://typolize.now.sh/) for examples of it being used. Take a look at the [default theme](./src/themes/default) for an example of the settings.
+See the [demo](https://typolize.now.sh/) for examples of it being used. Take a look at the [default theme](./src/theme/default) for an example of the settings.
 
 
 ## Install
