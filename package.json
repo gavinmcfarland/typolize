@@ -1,12 +1,13 @@
 {
     "name": "typolize",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "A style reset for creating perfect modular scale in typography and spacing",
     "main": "src/index.js",
+    "style": "dist/typolize/index.css",
+    "unpkg": "dist/typolize/index.css",
     "scripts": {
         "build": "node src/index.js"
     },
-    "style": "dist/typolize.css",
     "author": "Gavin McFarland",
     "license": "CC0-1.0",
     "devDependencies": {
@@ -23,7 +24,6 @@
         "type": "git",
         "url": "git+https://github.com/limitlessloop/typolize.git"
     },
-    "unpkg": "dist/typolize/index.css",
     "keywords": [
         "css",
         "postcss",
