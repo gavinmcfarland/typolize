@@ -11,15 +11,15 @@ const fs = require('fs')
 fs.readFile('src/typolize.css', (err, css) => {
 
 	postcss([postcssImport, postcssFor, postcssNested, postcssMath, postcssPow, postcssLogical, autoprefixer])
-		.process(css, { from: 'src/typolize.css', to: 'dist/typolize.css' })
+		.process(css, { from: 'src/typolize.css', to: 'dist/typolize/index.css' })
 		.then(result => {
-			fs.writeFile('dist/typolize.css', result.css, () => true)
+			fs.writeFile('dist/typolize/index.css', result.css, () => true)
 			if (result.map) {
-				fs.writeFile('dest/typolize.css.map', result.map, () => true)
+				fs.writeFile('dest/typolize/index.css.map', result.map, () => true)
 			}
-			fs.writeFile('public/typolize.css', result.css, () => true)
+			fs.writeFile('public/typolize/index.css', result.css, () => true)
 			if (result.map) {
-				fs.writeFile('public/typolize.css.map', result.map, () => true)
+				fs.writeFile('public/typolize/index.css.map', result.map, () => true)
 			}
 		})
 })
