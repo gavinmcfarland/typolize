@@ -23,7 +23,7 @@
         "type": "git",
         "url": "git+https://github.com/limitlessloop/typolize.git"
     },
-    "unpkg": "dist/typolize.css",
+    "unpkg": "dist/typolize/index.css",
     "keywords": [
         "css",
         "postcss",
