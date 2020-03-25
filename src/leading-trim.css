@@ -2,7 +2,6 @@
 * {
 	--leading-trim-over-adjustment: 0em;
 	--leading-trim-under-adjustment: 0em;
-	--cap-height: 0.75;
 	--line-height: var(--line-ratio);
 
 	--unset: unset;

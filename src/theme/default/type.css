@@ -1,0 +1,34 @@
+/* Leading Trimming */
+
+h1, h2, h3, h4, blockquote, p {
+	--leading-trim: '';
+}
+
+/* Text Spacing */
+
+*+* {
+	margin-top: var(--em-1);
+}
+
+html, body, section, div, a {
+	margin-top: unset;
+	margin-bottom: unset;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: var(--em-1);
+}
+
+hr {
+	margin-top: var(--rem-5);
+	margin-bottom: var(--rem-5);
+}
+
+h1, h2, h3, h4, h5 {
+	margin-top: var(--em-2);
+	margin-bottom: var(--em-2);
+}
+
+h6 {
+	margin-top: var(--em-3);
+}

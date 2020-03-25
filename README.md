@@ -1,11 +1,8 @@
 # Typolize
 
-Normalizes type sizing and spacing using sensible defaults which are highly configurable.
+Typolize provides sensible default styling for good typography on the web. It consists of a reset and customizable variables that let you create harmonious type sizing and spacing.
 
-
-## Base
-
-You can customise the base values to determine the overal aesthetics. Type and spacing are calculated from these base values to provide harmonious configurations.
+Customising the following variables will give a completely different feel to the proportion and scale of your site or application.
 
 ```css
 :root {
@@ -16,12 +13,11 @@ You can customise the base values to determine the overal aesthetics. Type and s
 }
 ```
 
-Changing the default `font-ratio` for example will create either a larger or smaller scale of sizes in fonts.
+## Typesetting
 
+Generating a scale is useful to create typography which shares a common derivative. Sometimes this can lack contrast so by picking out certain steps in the scale it allows you to create a more distinctive look.
 
-## Font Sizing
-
-Customise the scales and contrast between different type elements by changing the default size.
+Below is an example of customizing the typesetting in Typolize.
 
 ```css
 :root {
@@ -35,20 +31,26 @@ Customise the scales and contrast between different type elements by changing th
     --font-size-small: var(--font-size--1);
 }
 ```
-Alternatively style elements uniquly using a font size variable `var(--font-size-<-2..10>)` ranging anywhere between `-2` and `10`. 
 
 ## Spacing
 
-To manage spacing choose from either em or rem spacing variables `var(--em-<-2..10>)` and `var(--rem-<-2..10>)` ranging anywhere between `-2` and `10`. Ems are useful for type spacing so they are relative to their size, and rems are useful components where for fixed spacing is needed.
+Control spacing between type by applying margins using either the `--em` or `--rem` variable with a range between `-2` and `10`.
 
-By deafult all type elements have a top and bottom margin of `var(--em-1)`. Containers like `divs` and `sections` do not not have margins.
-
-Customise spacing of elements
+For example:
 
 ```css
-h1 {
-    margin-top: var(--em-4);
+*+* {
+	margin-top: var(--em-1);
+}
+
+h1, h2, h3, h4, h5, h5, h6 {
+    margin-top: var(--em-3);
     margin-bottom: var(--em-2);
+}
+
+section {
+    margin-top: var(--rem-4);
+    margin-bottom: var(--rem-6);
 }
 ```
 
@@ -72,7 +74,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 ```
 
-Adjust to different fonts by setting `--cap-height`.
+Adjust to different fonts by setting the `--cap-height` which is a percentage of the font-size.
 
 ```css
 :root {
@@ -80,7 +82,7 @@ Adjust to different fonts by setting `--cap-height`.
 }
 ```
 
-See the [demo](https://typolize.now.sh/) for examples of it being used.
+See the [demo](https://typolize.now.sh/) for examples of it being used. Take a look at the [default theme](src/themes/default) for an example of the settings.
 
 
 ## Install

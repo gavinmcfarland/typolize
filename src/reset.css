@@ -1,9 +1,11 @@
+/* Remove margins from all elements */
 * {
 	margin: unset;
 	padding: unset;
 	box-sizing: border-box;
 }
 
+/* To solve issue of footer content not being fixed to bottom */
 html {
 	height: 100%;
 }
@@ -12,20 +14,8 @@ body {
 	min-height: 100%;
 }
 
-hr {
-	border: none;
-	margin-bottom: unset;
-}
-
-
 a {
 	display: inline;
-}
-
-
-img {
-	width: 100%;
-	height: auto;
 }
 
 code {
@@ -41,38 +31,27 @@ pre>code {
 	display: block;
 }
 
+
 iframe {
 	display: block;
 }
 
-
-
-
-
-
-
-* {
-	margin: unset;
-	padding: unset;
-	box-sizing: border-box;
-}
-
+/* Remove border from hr */
 hr {
 	border: none;
-	margin-bottom: unset;
 }
 
-
-
+/* If used inside code then it will inherit it's font-family */
 pre {
 	font-family: inherit;
 }
-
-a {
-	display: inline;
+/* Give inline elements nested in links a pointer cursor */
+a code {
+	cursor: pointer;
 }
 
-
+/* Images automatically calculate height from ratio of dimensions on html tag */
 img {
+	width: 100%;
 	height: auto;
 }

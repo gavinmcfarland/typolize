@@ -1,22 +1,26 @@
-/* Variables */
+/* Ratios */
 
 :root {
 	--font-base: 16px;
 	--font-ratio: 1.333;
 	--line-ratio: 1.5;
 	--spacing-ratio: 1;
-	--font-height: 0.75;
 }
 
+/* Font styling */
+
 :root {
+	--cap-height: 0.75;
 	--tab-size: 2;
 	--letter-spacing-body: -0.03em;
 	--letter-spacing-heading: -0.03em;
-	--font-family-body: Helvetica, sans-serif;
-	--font-family-heading: Helvetica, sans-serif;
+	--font-family-body: "Helvetica Neue", sans-serif;
+	--font-family-heading: "Helvetica Neue", sans-serif;
 	--font-family-code: "Andale Mono", monospace;
 	--font-weight-heading: bold;
 }
+
+/* Typsetting */
 
 :root {
 	--font-size-body: var(--font-size-0);
@@ -27,12 +31,12 @@
 	--font-size-h5: var(--font-size-1);
 	--font-size-h6: var(--font-size-0);
 	--font-size-blockquote: var(--font-size-body);
+	--font-size-small: var(--font-size--1);
 }
 
 :root {
 	--border-color-code: grey;
 }
-
 
 /* Leading Trimming */
 
@@ -68,3 +72,4 @@ h1, h2, h3, h4, h5 {
 h6 {
 	margin-top: var(--em-3);
 }
+

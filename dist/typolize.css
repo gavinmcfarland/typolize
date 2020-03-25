@@ -1,77 +1,53 @@
+/* Remove margins from all elements */
 * {
 	margin: unset;
 	padding: unset;
 	box-sizing: border-box;
 }
-
+/* To solve issue of footer content not being fixed to bottom */
 html {
 	height: 100%;
 }
-
 body {
 	min-height: 100%;
 }
-
-hr {
-	border: none;
-	margin-bottom: unset;
-}
-
 a {
 	display: inline;
 }
-
-img {
-	width: 100%;
-	height: auto;
-}
-
 code {
 	vertical-align: inherit; /* Because vertical baseline needs to match paragrah */
 	font-size: 0.9em; /* Because monospace usually appears bigger than non monospaced fonts */
 }
-
 div>code {
 	display: block; /* When code is used as a block? */
 }
-
 pre>code {
 	display: block;
 }
-
 iframe {
 	display: block;
 }
-
-* {
-	margin: unset;
-	padding: unset;
-	box-sizing: border-box;
-}
-
+/* Remove border from hr */
 hr {
 	border: none;
-	margin-bottom: unset;
 }
-
+/* If used inside code then it will inherit it's font-family */
 pre {
 	font-family: inherit;
 }
-
-a {
-	display: inline;
+/* Give inline elements nested in links a pointer cursor */
+a code {
+	cursor: pointer;
 }
-
+/* Images automatically calculate height from ratio of dimensions on html tag */
 img {
+	width: 100%;
 	height: auto;
 }
-
 /* leading-trim.css */
-
 * {
 	--leading-trim-over-adjustment: 0em;
 	--leading-trim-under-adjustment: 0em;
-	--cap-height: 0.75;
 	--line-height: var(--line-ratio);
 
 	--unset: unset;
@@ -79,32 +55,25 @@ img {
   	--leading-trim-over: var(--unset);
   	--leading-trim-under: var(--unset);
 }
-
 ::before, ::after {
 	display: block;
 }
-
 ::before {
 	content: var(--leading-trim, var(--leading-trim-over, unset));
 	margin-bottom: calc((var(--cap-height) - var(--line-height, 1)) * 0.5em - var(--leading-trim-over-adjustment));
 }
-
 ::after {
 	content: var(--leading-trim, var(--leading-trim-under, unset));
 	margin-top: calc((var(--cap-height) - var(--line-height, 1)) * 0.5em - var(--leading-trim-under-adjustment));
 }
-
 /* @-moz-document url-prefix() {} */
-
 .type-guide blockquote, .type-guide p, .type-guide ul, .type-guide ol, .type-guide h1, .type-guide h2, .type-guide h3, .type-guide h4, .type-guide h5, .type-guide h6, .type-guide nav, .type-guide div > code, .type-guide div > a, .type-guide .Button, .type-guide pre  {
 	display: flow-root;
 	/* padding-top: 0.02px; */
 	/* padding-bottom: 0.02px; */
 	background-color: hsla(187, 100%, 76%, 0.12);
 }
-
 /* Font sizes and spacing scales */
-
 :root {
     --font-size--2: calc(1rem * (1 / (var(--font-ratio) * var(--font-ratio))));
     --font-size--1: calc(1rem * (1 / (var(--font-ratio))));
@@ -159,11 +128,9 @@ img {
 	--rem-9: calc(1rem * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)));
 	--rem-10: calc(1rem * var(--spacing-ratio) * (var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio) * var(--line-ratio)))
 }
-
 html {
     font-size: var(--font-base);
 }
-
 body {
 	font-size: var(--font-size-body);
 	line-height: var(--line-ratio);
@@ -173,7 +140,6 @@ body {
 	font-family: var(--font-family-body);
 	letter-spacing: var(--letter-spacing-body);
 }
-
 h1,
 h2,
 h3,
@@ -184,83 +150,63 @@ h6 {
 	letter-spacing: var(--letter-spacing-heading);
 	font-weight: var(--font-weight-heading);
 }
-
 code {
 	font-family: var(--font-family-code);
 }
-
 h1 {
 	font-size: var(--font-size-h1);
 }
-
 h2 {
 	font-size: var(--font-size-h2);
 }
-
 h3 {
 	font-size: var(--font-size-h3);
 }
-
 h4 {
 	font-size: var(--font-size-h4);
 }
-
 h5 {
 	font-size: var(--font-size-h5);
 }
-
 h6 {
 	font-size: var(--font-size-h6);
 }
-
 blockquote {
 	font-size: var(--font-size-blockquote);
 }
-
 small {
 	font-size: var(--font-size-small);
 }
-
 /* Gap prop */
-
 [gap] {
 	--gap: var(--rem-1);
 }
-
 [gap]>*>* {
 	--gap: initial;
 }
-
 [gap]>*+* {
 	margin-top: var(--gap);
 }
-
 [gap="1"] {
 	--gap: var(--rem-1);
 }
-
 [gap="2"] {
 	--gap: var(--rem-2);
 }
-
 [gap="3"] {
 	--gap: var(--rem-3);
 }
-
 [gap="4"] {
 	--gap: var(--rem-4);
 }
-
 [gap="5"] {
 	--gap: var(--rem-5);
 }
-
 /* Defaults */
-
 :root {
 	--font-base: 1rem;
 	--font-ratio: 1;
 	--line-ratio: 1;
 	--spacing-ratio: 1;
-	--font-height: 0.75;
+	--cap-height: 0.75;
 }
